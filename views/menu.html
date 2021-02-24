@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>昌吉州基层党建标准化规范化智能管理系统</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="menu" v-cloak>
+    <header>
+      <div class="logo"></div>
+      <div class="setting">
+        <div class="setting_bg">
+          <img src="../images/head_photo.png" width="32">
+          <b>管理员</b>
+          <span></span>
+        </div>
+      </div>
+      <a class="menu" href="menu.html"></a>
+    </header>
+    <el-button type="text" icon="el-icon-close" class="return_button" @click="goback">
+    </el-button>
+    <div class="page">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;" class="act">
+              <img src="../img/t1.png">
+              <div class="title">社区党建</div>
+            </a></li>
+          <li><a href="javascript:;">
+              <img src="../img/t2.png">
+              <div class="title">农村党建</div>
+            </a></li>
+          <li><a href="javascript:;">
+              <img src="../img/t3.png">
+              <div class="title">乡镇街道</div>
+            </a></li>
+          <li><a href="javascript:;">
+              <img src="../img/t4.png">
+              <div class="title">综合应用</div>
+            </a></li>
+          <li><a href="javascript:;">
+              <img src="../img/t5.png">
+              <div class="title">科学分析</div>
+            </a></li>
+        </ul>
+      </div>
+
+
+      <div class="middle">
+        <!-- <div class="item">
+          <div class="l1 clearfix">
+            <a href="#"><img src="../img/b11.png" />
+              <div class="title">星级化创建</div>
+            </a>
+            <a href="#"><img src="../img/b12.png" />
+              <div class="title">软弱涣散</br>党组织整顿</div>
+            </a>
+            <a href="#"><img src="../img/b13.png" />
+              <div class="title">巩固脱贫成果</div>
+            </a>
+            <a href="#"><img src="../img/b14.png" />
+              <div class="title">村民说事日</div>
+            </a>
+            <a href="#"><img src="../img/b15.png" />
+              <div class="title">双联双亮双述一服务</div>
+            </a>
+            <a href="#"><img src="../img/b16.png" />
+              <div class="title">惠民政策</div>
+            </a>
+            <a href="#"><img src="../img/b17.png" />
+              <div class="title">办实事好事</div>
+            </a>
+            <a href="#"><img src="../img/b18.png" />
+              <div class="title">派单接单</div>
+            </a>
+            <a href="#"><img src="../img/b19.png" />
+              <div class="title">困难诉求</div>
+            </a>
+            <a href="#"><img src="../img/b20.png" />
+              <div class="title">社区大党委</div>
+            </a>
+            <a href="#"><img src="../img/b21.png" />
+              <div class="title">党建+物业</div>
+            </a>
+          </div>
+        </div> -->
+        <div class="item">
+          <div class="type_title">落实基本制度</div>
+          <div class="list1">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="dis1"><img src="../img/a11.png" />
+                    <div class="title">党旗映天山</br>主题党日制</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/a12.png" />
+                    <div class="title">三务公开</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="active">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a21.png" />
+                  <div class="title">支部党员大会</div>
+                </a>
+                <a href="#"><img src="../img/a22.png" />
+                  <div class="title">支部委员会</div>
+                </a>
+                <a href="#"><img src="../img/a23.png" />
+                  <div class="title">党小组会</div>
+                </a>
+                <a href="#"><img src="../img/a24.png" />
+                  <div class="title">党课</div>
+                </a>
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="type_title">规范基本活动</div>
+          <div class="list2">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="dis2"><img src="../img/b11.png" />
+                    <div class="title">星级化创建</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b12.png" />
+                    <div class="title">软弱涣散</br>党组织整顿</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b18.png" />
+                    <div class="title">派单接单</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b20.png" />
+                    <div class="title">社区大党委</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b21.png" />
+                    <div class="title">党建+物业</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b16.png" />
+                    <div class="title">惠民政策</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b17.png" />
+                    <div class="title">办实事好事</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="active2">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a21.png" />
+                  <div class="title">支部党员大会</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active2 hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active2 hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active2 hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a23.png" />
+                  <div class="title">党小组会</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active2 hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a24.png" />
+                  <div class="title">党课</div>
+                </a>
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active2 hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active2 hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="type_title">建强基本队伍</div>
+          <div class="list3">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="dis3"><img src="../img/c12.png" />
+                    <div class="title">访惠聚工作队</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/c13.png" />
+                    <div class="title">村级干部队伍</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/c14.png" />
+                    <div class="title">党员队伍</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/c15.png" />
+                    <div class="title">下沉干部队伍</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/c16.png" />
+                    <div class="title">应急志愿者队伍</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="active3">
+              <div class="s1">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-1.png" />
+                        <div class="title">工作队伍</br>基本情况</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-2.png" />
+                        <div class="title">工作队员</br>花名册</div>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-3.png" />
+                        <div class="title">五个在一起</br>结对帮带</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-4.png" />
+                        <div class="title">请销假</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="active3 hidden">
+              <div class="s2">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-5.png" />
+                        <div class="title">村干部</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-6.png" />
+                        <div class="title">片(组)干部</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-7.png" />
+                        <div class="title">村级后备力量</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-8.png" />
+                        <div class="title">四老人员</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-9.png" />
+                        <div class="title">联户长</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active3 hidden">
+              <div class="s3">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/c21.png" />
+                        <div class="title">发展党员</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/c22.png" />
+                        <div class="title">党员基本情况</div>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="javascript:;"><img src="../img/c23.png" />
+                        <div class="title">流动党员管理</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active3 hidden">
+              <div class="s4">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-10.png" />
+                        <div class="title">下沉干部</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-11.png" />
+                        <div class="title">下沉记录</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active3 hidden">
+              <div class="s5">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-12.png" />
+                        <div class="title">志愿者信息</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-13.png" />
+                        <div class="title">志愿者</br>服务记录</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active4 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/l3-1.png" />
+                  <div class="title">请假</div>
+                </a>
+                <a href="#"><img src="../img/l3-2.png" />
+                  <div class="title">休假</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active6 hidden">
+              <div class="l3 clearfix">
+
+              </div>
+            </div>
+            <div class="active6 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/l3-3.png" />
+                  <div class="title">入党申请</div>
+                </a>
+                <a href="#"><img src="../img/l3-4.png" />
+                  <div class="title">入党积极分子</div>
+                </a>
+                <a href="#"><img src="../img/l3-5.png" />
+                  <div class="title">发展对象</div>
+                </a>
+                <a href="#"><img src="../img/l3-6.png" />
+                  <div class="title">预备党员</div>
+                </a>
+                <a href="#"><img src="../img/l3-7.png" />
+                  <div class="title">党员</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active6 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/c31.png" />
+                  <div class="title">流出党员花名册</div>
+                </a>
+                <a href="#"><img src="../img/c32.png" />
+                  <div class="title">流入党员花名册</div>
+                </a>
+                <a href="#"><img src="../img/c33.png" />
+                  <div class="title">流出申请</div>
+                </a>
+                <a href="#"><img src="../img/c34.png" />
+                  <div class="title">流入接收</div>
+                </a>
+                <a href="#"><img src="../img/c35.png" />
+                  <div class="title">内地昌吉籍外出务工经商党员花名册</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="type_title">夯实基本保障</div>
+          <div class="list4">
+            <div class="l1 clearfix">
+              <a href="#"><img src="../img/d11.png" />
+                <div class="title">基层组织经费</div>
+              </a>
+              <a href="#"><img src="../img/d12.png" />
+                <div class="title">为民办实事好事经费</div>
+              </a>
+              <a href="#"><img src="../img/d13.png" />
+                <div class="title">村（社区）干部工资报酬</div>
+              </a>
+              <a href="#"><img src="../img/d14.png" />
+                <div class="title">村集体经济</div>
+              </a>
+            </div>
+          </div>
+          <div class="type_title">巩固基本阵地</div>
+          <div class="list5">
+            <div class="l1 clearfix">
+              <a href="#"><img src="../img/e11.png" />
+                <div class="title">村(社区)党组织设置</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item hide">
+          <div class="type_title">落实基本制度</div>
+          <div class="list1">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="dis1"><img src="../img/a11.png" />
+                    <div class="title">党旗映天山</br>主题党日制</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/a12.png" />
+                    <div class="title">三务公开</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/a13.png" />
+                    <div class="title">四议两公开</div>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="active">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a21.png" />
+                  <div class="title">支部党员大会</div>
+                </a>
+                <a href="#"><img src="../img/a22.png" />
+                  <div class="title">支部委员会</div>
+                </a>
+                <a href="#"><img src="../img/a23.png" />
+                  <div class="title">党小组会</div>
+                </a>
+                <a href="#"><img src="../img/a24.png" />
+                  <div class="title">党课</div>
+                </a>
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active hidden">
+              <div class="l2 clearfix">
+                <a href="#"><img src="../img/a25.png" />
+                  <div class="title">主题党日</div>
+                </a>
+                <a href="#"><img src="../img/a26.png" />
+                  <div class="title">组织生活会</div>
+                </a>
+                <a href="#"><img src="../img/a27.png" />
+                  <div class="title">民主评议党员</div>
+                </a>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="type_title">规范基本活动</div>
+          <div class="list2">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;"><img src="../img/b11.png" />
+                    <div class="title">星级化创建</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b12.png" />
+                    <div class="title">软弱涣散</br>党组织整顿</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b13.png" />
+                    <div class="title">巩固脱贫成果</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b14.png" />
+                    <div class="title">村民说事日</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img src="../img/b15.png" />
+                    <div class="title">双联双亮双述一服务</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b16.png" />
+                    <div class="title">惠民政策</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b17.png" />
+                    <div class="title">办实事好事</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/b19.png" />
+                    <div class="title">困难诉求</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="type_title">建强基本队伍</div>
+          <div class="list9">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="dis3"><img src="../img/c12.png" />
+                    <div class="title">访惠聚工作队</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/c13.png" />
+                    <div class="title">村级干部队伍</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/c14.png" />
+                    <div class="title">党员队伍</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/c15.png" />
+                    <div class="title">下沉干部队伍</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/c16.png" />
+                    <div class="title">应急志愿者队伍</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="active9">
+              <div class="s1">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-1.png" />
+                        <div class="title">工作队伍</br>基本情况</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-2.png" />
+                        <div class="title">工作队员</br>花名册</div>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-3.png" />
+                        <div class="title">五个在一起</br>结对帮带</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-4.png" />
+                        <div class="title">请销假</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="active9 hidden">
+              <div class="s2">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-5.png" />
+                        <div class="title">村干部</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-6.png" />
+                        <div class="title">片(组)干部</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-7.png" />
+                        <div class="title">村级后备力量</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-8.png" />
+                        <div class="title">四老人员</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-9.png" />
+                        <div class="title">联户长</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active9 hidden">
+              <div class="s3">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/c21.png" />
+                        <div class="title">发展党员</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/c22.png" />
+                        <div class="title">党员基本情况</div>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="javascript:;"><img src="../img/c23.png" />
+                        <div class="title">流动党员管理</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active9 hidden">
+              <div class="s4">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-10.png" />
+                        <div class="title">下沉干部</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-11.png" />
+                        <div class="title">下沉记录</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active9 hidden">
+              <div class="s5">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-12.png" />
+                        <div class="title">志愿者信息</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-13.png" />
+                        <div class="title">志愿者</br>服务记录</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active10 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/l3-1.png" />
+                  <div class="title">请假</div>
+                </a>
+                <a href="#"><img src="../img/l3-2.png" />
+                  <div class="title">休假</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active11 hidden">
+              <div class="l3 clearfix">
+
+              </div>
+            </div>
+            <div class="active11 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/l3-3.png" />
+                  <div class="title">入党申请</div>
+                </a>
+                <a href="#"><img src="../img/l3-4.png" />
+                  <div class="title">入党积极分子</div>
+                </a>
+                <a href="#"><img src="../img/l3-5.png" />
+                  <div class="title">发展对象</div>
+                </a>
+                <a href="#"><img src="../img/l3-6.png" />
+                  <div class="title">预备党员</div>
+                </a>
+                <a href="#"><img src="../img/l3-7.png" />
+                  <div class="title">党员</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="active11 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/c31.png" />
+                  <div class="title">流出党员花名册</div>
+                </a>
+                <a href="#"><img src="../img/c32.png" />
+                  <div class="title">流入党员花名册</div>
+                </a>
+                <a href="#"><img src="../img/c33.png" />
+                  <div class="title">流出申请</div>
+                </a>
+                <a href="#"><img src="../img/c34.png" />
+                  <div class="title">流入接收</div>
+                </a>
+                <a href="#"><img src="../img/c35.png" />
+                  <div class="title">内地昌吉籍外出务工经商党员花名册</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="type_title">夯实基本保障</div>
+          <div class="list4">
+            <div class="l1 clearfix">
+              <a href="#"><img src="../img/d11.png" />
+                <div class="title">基层组织经费</div>
+              </a>
+              <a href="#"><img src="../img/d12.png" />
+                <div class="title">为民办实事好事经费</div>
+              </a>
+              <a href="#"><img src="../img/d13.png" />
+                <div class="title">村（社区）干部工资报酬</div>
+              </a>
+              <a href="#"><img src="../img/d14.png" />
+                <div class="title">村集体经济</div>
+              </a>
+            </div>
+          </div>
+          <div class="type_title">巩固基本阵地</div>
+          <div class="list5">
+            <div class="l1 clearfix">
+              <a href="#"><img src="../img/e11.png" />
+                <div class="title">村(社区)党组织设置</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item hide">
+          <div class="type_title">乡镇街道</div>
+          <div class="list8">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-19.png" />
+                    <div class="title">议事决策</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-20.png" />
+                    <div class="title">工作例会</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-21.png" />
+                    <div class="title">党建研究</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-22.png" />
+                    <div class="title">述职评议</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-23.png" />
+                    <div class="title">街道大工委</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-24.png" />
+                    <div class="title">派单接单</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-25.png" />
+                    <div class="title">村(社区)干部</br>工资报酬</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-26.png" />
+                    <div class="title">乡镇领导</br>班子队伍</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="active8 hidden">
+              <div class="l2 clearfix">
+                <ul>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-27.png" />
+                      <div class="title">单源办理</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-28.png" />
+                      <div class="title">应急单办理</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item hide">
+          <div class="type_title">综合应用</div>
+          <div class="list6">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="dis8"><img src="../img/l1-1.png" />
+                    <div class="title">统计查询</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-2.png" />
+                    <div class="title">报表管理</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-3.png" />
+                    <div class="title">预警</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-4.png" />
+                    <div class="title">排名</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-5.png" />
+                    <div class="title">考核</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-6.png" />
+                    <div class="title">加分申请</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-7.png" />
+                    <div class="title">任务推送</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-8.png" />
+                    <div class="title">派单接单分析</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-9.png" />
+                    <div class="title">帮助</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-10.png" />
+                    <div class="title">信息互动</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="active7">
+              <div class="l2 clearfix">
+                <ul>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-14.png" />
+                      <div class="title">人员信息查询</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-15.png" />
+                      <div class="title">业务信息查询</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="active7 hidden">
+              <div class="s6">
+                <div class="l2 clearfix">
+                  <ul>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-16.png" />
+                        <div class="title">报表统计</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-17.png" />
+                        <div class="title">上报流程管理</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-18.png" />
+                        <div class="title">上报任务管理</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;"><img src="../img/l2-19.png" />
+                        <div class="title">我的报表任务</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="active7 hidden">
+              <div class="l2 clearfix">
+                <ul>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-20.png" />
+                      <div class="title">考核管理</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-21.png" />
+                      <div class="title">考核公示</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-22.png" />
+                      <div class="title">考核档案</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-23.png" />
+                      <div class="title">考核查询</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-24.png" />
+                      <div class="title">考核参数配置</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="active7 hidden">
+              <div class="l2 clearfix">
+                <ul>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-25.png" />
+                      <div class="title">通知公告</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../img/l2-26.png" />
+                      <div class="title">消息推送</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="active7-1 hidden">
+              <div class="l3 clearfix">
+                <a href="#"><img src="../img/l3-8.png" />
+                  <div class="title">基层党建类报表</div>
+                </a>
+                <a href="#"><img src="../img/l3-9.png" />
+                  <div class="title">政法类报表</div>
+                </a>
+                <a href="#"><img src="../img/l3-10.png" />
+                  <div class="title">统战民宗类报表</div>
+                </a>
+                <a href="#"><img src="../img/l3-11.png" />
+                  <div class="title">人社类报表</div>
+                </a>
+                <a href="#"><img src="../img/l3-12.png" />
+                  <div class="title">其他类报表</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="item hide">
+          <div class="type_title">科学分析</div>
+          <div class="list7">
+            <div class="l1 clearfix">
+              <ul>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-9.png" />
+                    <div class="title">数据分析</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-10.png" />
+                    <div class="title">进度分析</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-11.png" />
+                    <div class="title">效果分析</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-12.png" />
+                    <div class="title">派单接单</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-13.png" />
+                    <div class="title">三双一服务</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-14.png" />
+                    <div class="title">人口分析</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-15.png" />
+                    <div class="title">村民说事</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;"><img src="../img/l1-16.png" />
+                    <div class="title">队伍建设</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/common.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  $(function () {
+    $('.top ul li a').on('click', function () {
+      $('.top ul li a').removeClass('act');
+      $(this).addClass('act');
+      const index = $(this).parent().index();
+      $('.middle .item').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hide');
+        } else {
+          if (!$(v).hasClass('hide')) {
+            $(v).addClass('hide');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.list1 .l1 ul li a').on('click', function () {
+      $('.list1 .l1 ul li a').removeClass('dis1');
+      $(this).addClass('dis1');
+      const index = $(this).parent().index();
+      $('.active').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.list2 .l1 ul li a').on('click', function () {
+      $('.list2 .l1 ul li a').removeClass('dis2');
+      $(this).addClass('dis2');
+      const index = $(this).parent().index();
+      $('.active2').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.list3 .l1 ul li a').on('click', function () {
+      $('.list3 .l1 ul li a').removeClass('dis3');
+      $(this).addClass('dis3');
+      const index = $(this).parent().index();
+      $('.active4').each(function (i, v) {
+        if (!$(v).hasClass('hidden')) {
+          $(v).addClass('hidden');
+        }
+      })
+      $('.active6').each(function (i, v) {
+        if (!$(v).hasClass('hidden')) {
+          $(v).addClass('hidden');
+        }
+      })
+      $('.active3 .s1 .l2 ul li a').removeClass('dis4');
+      $('.active3 .s3 .l2 ul li a').removeClass('dis6');
+      $('.active3').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.list9 .l1 ul li a').on('click', function () {
+      $('.list9 .l1 ul li a').removeClass('dis3');
+      $(this).addClass('dis3');
+      const index = $(this).parent().index();
+      $('.active10').each(function (i, v) {
+        if (!$(v).hasClass('hidden')) {
+          $(v).addClass('hidden');
+        }
+      })
+      $('.active11').each(function (i, v) {
+        if (!$(v).hasClass('hidden')) {
+          $(v).addClass('hidden');
+        }
+      })
+      $('.active9 .s1 .l2 ul li a').removeClass('dis4');
+      $('.active9 .s3 .l2 ul li a').removeClass('dis6');
+      $('.active9').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.active3 .s1 .l2 ul li a').on('click', function () {
+      $('.active3 .s1 .l2 ul li a').removeClass('dis4');
+      $(this).addClass('dis4');
+      const index = $(this).parent().index();
+      $('.active4').each(function (i, v) {
+        if (3 === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.active3 .s3 .l2 ul li a').on('click', function () {
+      $('.active3 .s3 .l2 ul li a').removeClass('dis6');
+      $(this).addClass('dis6');
+      const index = $(this).parent().index();
+      $('.active6').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.active9 .s1 .l2 ul li a').on('click', function () {
+      $('.active9 .s1 .l2 ul li a').removeClass('dis4');
+      $(this).addClass('dis4');
+      const index = $(this).parent().index();
+      $('.active10').each(function (i, v) {
+        if (3 === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.active9 .s3 .l2 ul li a').on('click', function () {
+      $('.active9 .s3 .l2 ul li a').removeClass('dis6');
+      $(this).addClass('dis6');
+      const index = $(this).parent().index();
+      $('.active11').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.list6 .l1 ul li a').on('click', function () {
+      $('.list6 .l1 ul li a').removeClass('dis8');
+      $(this).addClass('dis8');
+      const index = $(this).parent().index();
+      $('.active7-1').each(function (i, v) {
+        if (!$(v).hasClass('hidden')) {
+          $(v).addClass('hidden');
+        }
+      })
+      $('.active7 .s6 .l2 ul li a').removeClass('dis9');
+      $('.active7').each(function (i, v) {
+        if (index === 0 && i === 0 || index === 1 && i === 1 || index === 4 && i === 2 || index === 6 &&
+          i === 3) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.active7 .s6 .l2 ul li a').on('click', function () {
+      $('.active7 .s6 .l2 ul li a').removeClass('dis9');
+      $(this).addClass('dis9');
+      const index = $(this).parent().index();
+      $('.active7-1').each(function (i, v) {
+        if (index === 0 && i === 0) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+  $(function () {
+    $('.list8 .l1 ul li a').on('click', function () {
+      $('.list8 .l1 ul li a').removeClass('dis10');
+      $(this).addClass('dis10');
+      const index = $(this).parent().index();
+      $('.active8').each(function (i, v) {
+        if (index === 5 && i === 0) {
+          $(v).removeClass('hidden');
+        } else {
+          if (!$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          }
+        }
+      })
+    })
+  })
+
+
+
+
+  new Vue({
+    el: "#menu",
+    data() {
+      return {
+
+      }
+    },
+    created() {},
+    watch: {
+
+    },
+    mounted() {
+
+    },
+    methods: {
+      goback() {
+        window.location.href = "index.html"
+      }
+    }
+  })
+</script>
+
+</html>

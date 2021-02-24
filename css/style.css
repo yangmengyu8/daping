@@ -1,0 +1,260 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+}
+/* 谷歌滚动调样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5bc0de
+}
+
+[v-cloak] {
+  display: none;
+}
+
+a{
+	text-decoration: none;
+}
+/* 头部样式 */
+header {
+  background: url(../images/header.png) no-repeat center;
+  width: 100%;
+  height: 70px;
+  background-size: 100% 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header .logo {
+  background: url(../images/logo.png) no-repeat left center;
+  width: 100%;
+  height: 70px;
+  background-size: 50%;
+}
+
+header .setting {
+  width: 11%;
+  text-align: center;
+  padding: 15px 0px;
+  /* margin-right: 80px; */
+}
+
+.setting:hover {
+  background-color: rgba(255, 255, 255, .2)
+}
+
+.setting_bg {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.setting_bg img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.setting b {
+  display: inline-block;
+  vertical-align: middle;
+  color: #FF6A33;
+}
+
+.setting span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  color: #FF6A33;
+}
+
+.return_button {
+  position: absolute;
+  color: #333 !important;
+  font-size: 22px !important;
+  right: 10px;
+}
+.hide{
+	display: none;
+}
+.hidden{
+  display: none;
+}
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	zoom: 1;
+}
+.page{
+	width: 1300px;
+	margin: 0 auto;
+}
+.top{
+	margin-top: 30px;
+}
+.top ul,.l1 ul,.l2 ul {
+	list-style: none;
+	padding: 0;
+}
+.top ul li{
+	display: block;
+	float: left;
+	margin-left: 20px;
+}
+.top ul li:first-child{
+	margin-left: 0;
+}
+.top ul li a{
+	display: block;
+	background-color: #FFF;
+	color: #606060;
+	padding: 15px 25px;
+	border-radius: 6px;
+}
+.top ul li a.act,.top ul li a:hover{
+	background-color: #ed4f50;
+	color: #FFF;
+}
+
+.list1,.list2,.list3,.list4,.list5,.list6,.list7,.list8,.list9{
+  background-color: #FFF;
+  padding: 0 20px;
+}
+.list5,.list6,.list7,.list8{
+  margin-bottom: 20px;
+}
+.middle .type_title {
+  color: #9F9F9F;
+  margin: 15px 0;
+  font-size: 15px;
+}
+.l1 a{
+	float: left;
+	background-color: #FFF;
+	border-bottom: 6px solid transparent;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	border-radius: 6px;
+	box-shadow: 0 0 8px #ccc;
+	color: #606060;
+}
+.l1 a:hover,
+.l2 a:hover,
+.l3 a:hover,
+.l1 a.dis1,
+.l1 a.dis2,
+.l1 a.dis3,
+.l2 a.dis4,
+.l2 a.dis5,
+.l2 a.dis6,
+.l2 a.dis7,
+.l1 a.dis8,
+.l2 a.dis9,
+.l1 a.dis10 {
+	border-bottom: 6px solid #ed4f50;
+}
+.l1 a img,.l2 a img{
+	margin-top: 10px;
+}
+.l1 a .title{
+	margin-top: 5px;
+	text-align: center;
+	height: 42px;
+	overflow: hidden;
+	width: 98px;
+}
+.l2 {
+	border-top: 1px solid #CCCCCC;
+}
+.l2 a:first-child{
+	margin-left: 20px;
+}
+.l2 a{
+	float: left;
+	background-color: #FFF;
+	border-bottom: 6px solid transparent;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px 15px;
+	border-radius: 6px;
+	box-shadow: 0 0 8px #ccc;
+	color: #606060;
+}
+.l2 a .title{
+	margin-top: 5px;
+	text-align: center;
+	overflow: hidden;
+	font-size: 12px;
+  height: 42px;
+}
+.l3 a:first-child{
+	margin-left: 20px;
+}
+.l3 a{
+	float: left;
+	background-color: #FFF;
+	border-bottom: 6px solid transparent;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px 15px;
+	border-radius: 6px;
+	box-shadow: 0 0 8px #ccc;
+	color: #606060;
+	height: 47px;
+}
+.l3 a img{
+	width: 47px;
+	height: 47px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.l3 a .title{
+	text-align: center;
+	overflow: hidden;
+	font-size: 12px;
+	margin-left: 10px;
+	width: 110px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.menu:hover {
+  background-color: rgba(255, 255, 255, .2)
+}
+
+.menu {
+  width: 7%;
+  height: 100%;
+  background: url(../images/menu.png) no-repeat center;
+}
+/* 分类样式 */
+.top li a img{
+  width: 47px;
+  height: 47px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.top li a .title{
+  display: inline-block;
+  margin-left: 5px;
+}

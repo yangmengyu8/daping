@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="menu" v-cloak>
+    <header>
+      <div class="logo"></div>
+      <div class="setting">
+        <div class="setting_bg">
+          <img src="../images/head_photo.png" width="32">
+          <b>管理员</b>
+          <span></span>
+        </div>
+      </div>
+      <a class="menu" href="index1.html"></a>
+    </header>
+    <el-button type="text" icon="el-icon-close" class="return_button" @click="goback">
+    </el-button>
+    <div class="page">
+      <div class="top">
+        <ul class="clearfix">
+          <li><a href="javascript:;" class="act">落实基本制度</a></li>
+          <li><a href="javascript:;">规范基本活动</a></li>
+          <li><a href="javascript:;">建强基本队伍</a></li>
+          <li><a href="javascript:;">夯实基本保障</a></li>
+          <li><a href="javascript:;">巩固基本阵地</a></li>
+        </ul>
+      </div>
+      <div class="middle">
+        <div class="item">
+          <div class="l1 clearfix">
+            <a href="#"><img src="../img/a11.png" />
+              <div class="title">党旗映天山</br>主题党日制</div>
+            </a>
+            <a href="#"><img src="../img/a12.png" />
+              <div class="title">三务公开</div>
+            </a>
+            <a href="#"><img src="../img/a13.png" />
+              <div class="title">四议两公开</div>
+            </a>
+          </div>
+          <div class="l2 clearfix">
+            <a href="#"><img src="../img/a21.png" />
+              <div class="title">支部党员大会</div>
+            </a>
+            <a href="#"><img src="../img/a22.png" />
+              <div class="title">支部委员会</div>
+            </a>
+            <a href="#"><img src="../img/a23.png" />
+              <div class="title">党小组会</div>
+            </a>
+            <a href="#"><img src="../img/a24.png" />
+              <div class="title">党课</div>
+            </a>
+            <a href="#"><img src="../img/a25.png" />
+              <div class="title">主题党日</div>
+            </a>
+            <a href="#"><img src="../img/a26.png" />
+              <div class="title">组织生活会</div>
+            </a>
+            <a href="#"><img src="../img/a27.png" />
+              <div class="title">民主评议党员</div>
+            </a>
+          </div>
+        </div>
+        <div class="item hide">
+          <div class="l1 clearfix">
+            <a href="#"><img src="../img/b11.png" />
+              <div class="title">星级化创建</div>
+            </a>
+            <a href="#"><img src="../img/b12.png" />
+              <div class="title">软弱涣散</br>党组织整顿</div>
+            </a>
+            <a href="#"><img src="../img/b13.png" />
+              <div class="title">巩固脱贫成果</div>
+            </a>
+            <a href="#"><img src="../img/b14.png" />
+              <div class="title">村民说事日</div>
+            </a>
+            <a href="#"><img src="../img/b15.png" />
+              <div class="title">双联双亮双述一服务</div>
+            </a>
+            <a href="#"><img src="../img/b16.png" />
+              <div class="title">惠民政策</div>
+            </a>
+            <a href="#"><img src="../img/b17.png" />
+              <div class="title">办实事好事</div>
+            </a>
+            <a href="#"><img src="../img/b18.png" />
+              <div class="title">派单接单</div>
+            </a>
+            <a href="#"><img src="../img/b19.png" />
+              <div class="title">困难诉求</div>
+            </a>
+            <a href="#"><img src="../img/b20.png" />
+              <div class="title">社区大党委</div>
+            </a>
+            <a href="#"><img src="../img/b21.png" />
+              <div class="title">党建+物业</div>
+            </a>
+          </div>
+        </div>
+        <div class="item hide">
+          <div class="l1 clearfix">
+            <a href="#"><img src="../img/c11.png" />
+              <div class="title">乡镇领导班子队伍</div>
+            </a>
+            <a href="#"><img src="../img/c12.png" />
+              <div class="title">访惠聚工作队</div>
+            </a>
+            <a href="#"><img src="../img/c13.png" />
+              <div class="title">村级干部队伍</div>
+            </a>
+            <a href="#"><img src="../img/c14.png" />
+              <div class="title">党员队伍</div>
+            </a>
+            <a href="#"><img src="../img/c15.png" />
+              <div class="title">下沉干部队伍</div>
+            </a>
+            <a href="#"><img src="../img/c16.png" />
+              <div class="title">应急志愿者队伍</div>
+            </a>
+          </div>
+          <div class="l2 clearfix">
+            <a href="#"><img src="../img/c21.png" />
+              <div class="title">发展党员</div>
+            </a>
+            <a href="#"><img src="../img/c22.png" />
+              <div class="title">党员基本情况</div>
+            </a>
+            <a href="#"><img src="../img/c23.png" />
+              <div class="title">流动党员管理</div>
+            </a>
+          </div>
+          <div class="l3 clearfix">
+            <a href="#"><img src="../img/c31.png" />
+              <div class="title">流出党员花名册</div>
+            </a>
+            <a href="#"><img src="../img/c32.png" />
+              <div class="title">流入党员花名册</div>
+            </a>
+            <a href="#"><img src="../img/c33.png" />
+              <div class="title">流出申请</div>
+            </a>
+            <a href="#"><img src="../img/c34.png" />
+              <div class="title">流入接收</div>
+            </a>
+            <a href="#"><img src="../img/c35.png" />
+              <div class="title">内地昌吉籍外出务工经商党员花名册</div>
+            </a>
+          </div>
+        </div>
+        <div class="item hide">
+          <div class="l1 clearfix">
+            <a href="#"><img src="../img/d11.png" />
+              <div class="title">基层组织经费</div>
+            </a>
+            <a href="#"><img src="../img/d12.png" />
+              <div class="title">为民办实事好事经费</div>
+            </a>
+            <a href="#"><img src="../img/d13.png" />
+              <div class="title">村（社区）干部工资报酬</div>
+            </a>
+            <a href="#"><img src="../img/d14.png" />
+              <div class="title">村集体经济</div>
+            </a>
+          </div>
+        </div>
+        <div class="item hide">
+          <div class="l1 clearfix">
+            <a href="#"><img src="../img/e11.png" />
+              <div class="title">村(社区)党组织设置</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/common.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  $(function () {
+    $('.top ul li a').on('click', function () {
+      $('.top ul li a').removeClass('act');
+      $(this).addClass('act');
+      var index = $(this).parent().index();
+      $('.middle .item').each(function (i, v) {
+        if (i === index) {
+          $(v).removeClass('hide');
+        } else {
+          if (!$(v).hasClass('hide')) {
+            $(v).addClass('hide');
+          }
+        }
+      })
+    })
+  })
+
+  new Vue({
+    el: "#menu",
+    data() {
+      return {
+
+      }
+    },
+    created() {},
+    watch: {
+
+    },
+    mounted() {
+
+    },
+    methods: {
+      goback() {
+        window.location.href = "index.html"
+      }
+    }
+  })
+</script>
+
+</html>
