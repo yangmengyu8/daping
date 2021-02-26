@@ -103,7 +103,7 @@ ol {
 }
 /* 头部样式 */
 header{
-  background: url('images/header.png') no-repeat center;
+  background: url('../images/header.png') no-repeat center;
   width: 100%;
   height: 1.09375rem;
   background-size: 100% 100%;
@@ -111,7 +111,7 @@ header{
   flex-flow: row nowrap;
 }
 header .logo{
-  background: url('images/logo.png') no-repeat left;
+  background: url('../images/logo.png') no-repeat left;
   width: 100%;
   height: 1.09375rem;
   background-size: 50%;
@@ -131,7 +131,7 @@ header .setting {
 .menu {
   width: 7%;
   height: 100%;
-  background: url('images/menu.png') no-repeat center;
+  background: url('../images/menu.png') no-repeat center;
 }
 .setting_bg{
   background-color: #FFFFFF;
