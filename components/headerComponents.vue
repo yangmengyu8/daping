@@ -9,7 +9,7 @@
           <span></span>
         </div>
       </div>
-      <a class="menu" href="../views/menu.html"></a>
+      <a class="menu" href="views/menu.html"></a>
     </header>
 
     <div>
