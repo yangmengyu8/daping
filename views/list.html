@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="../css/list.css">
+  <link rel="stylesheet" href="../css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="list">
+    <!-- 头部 -->
+    <headercomponents></headercomponents>
+    <div class="page">
+      <div class="title">
+        <span>三会一课（支部党员大会）</span><a href="chart.html" class="btn btn_interaction">信息互动</a>
+        <!-- <a href="#"
+          class="btn btn_all">全部</a> -->
+        <a href="#" class="btn btn_chart">图表模式</a>
+      </div>
+      <div class="condition">
+        <select>
+          <option>市县名称</option>
+        </select>
+        <select>
+          <option>乡镇街道名称</option>
+        </select>
+        <select>
+          <option>村社区名称</option>
+        </select>
+        <select>
+          <option>数据范围</option>
+        </select>
+        <input type="text" placeholder="议题" />
+        <input type="text" placeholder="主持人姓名" />
+        <input type="text" readonly class="datetime" placeholder="会议时间" />- <input type="text" readonly class="datetime"
+          placeholder="会议时间" />
+
+
+        <input type="text" placeholder="流动党员参会" />
+        <input type="text" placeholder="流动党员参会" />
+        <input type="text" readonly class="datetime" placeholder="会议时长" />- <input type="text" readonly class="datetime"
+          placeholder="会议时长" />
+        <select>
+          <option>访惠聚工作队成员是否参与</option>
+        </select>
+        <select>
+          <option>是否有建档立卡扶贫户村</option>
+        </select>
+        <select>
+          <option>是否自治区关注扶贫村</option>
+        </select>
+        <select>
+          <option>抽审状态</option>
+        </select>
+        <select>
+          <option>状态</option>
+        </select>
+        <a href="#" class="btn btn_search">查询</a>
+      </div>
+      <div class="tables">
+        <div class="tables_title">
+          支部党员大会列表
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>组织名称</th>
+              <th>会议时间</th>
+              <th>会议时长<br>（分钟）</th>
+              <th>访惠聚成员是否参与</th>
+              <th>议题</th>
+              <th>主持人姓名</th>
+              <th>党员总数</th>
+              <th>流动党员参会人数</th>
+              <th>新增时间</th>
+              <th>抽审状态</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td width="100">昌吉市 宁边路街道北庭新村社区</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">1</td>
+              <td class="tc">是</td>
+              <td>测试</td>
+              <td>张三</td>
+              <td class="tc">21</td>
+              <td class="tc">11</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">已审核</td>
+              <td class="tc">尚未提交</td>
+              <td class="tc"><a href="#" class="btn btn_see">查看</a></td>
+            </tr>
+            <tr>
+              <td width="100">昌吉市 宁边路街道北庭新村社区</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">1</td>
+              <td class="tc">是</td>
+              <td>测试</td>
+              <td>张三</td>
+              <td class="tc">21</td>
+              <td class="tc">11</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">已审核</td>
+              <td class="tc">尚未提交</td>
+              <td class="tc"><a href="#" class="btn btn_see">查看</a></td>
+            </tr>
+            <tr>
+              <td width="100">昌吉市 宁边路街道北庭新村社区</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">1</td>
+              <td class="tc">是</td>
+              <td>测试</td>
+              <td>张三</td>
+              <td class="tc">21</td>
+              <td class="tc">11</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">已审核</td>
+              <td class="tc">尚未提交</td>
+              <td class="tc"><a href="#" class="btn btn_see">查看</a></td>
+            </tr>
+            <tr>
+              <td width="100">昌吉市 宁边路街道北庭新村社区</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">1</td>
+              <td class="tc">是</td>
+              <td>测试</td>
+              <td>张三</td>
+              <td class="tc">21</td>
+              <td class="tc">11</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">已审核</td>
+              <td class="tc">尚未提交</td>
+              <td class="tc"><a href="#" class="btn btn_see">查看</a></td>
+            </tr>
+            <tr>
+              <td width="100">昌吉市 宁边路街道北庭新村社区</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">1</td>
+              <td class="tc">是</td>
+              <td>测试</td>
+              <td>张三</td>
+              <td class="tc">21</td>
+              <td class="tc">11</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">已审核</td>
+              <td class="tc">尚未提交</td>
+              <td class="tc"><a href="#" class="btn btn_see">查看</a></td>
+            </tr>
+            <tr>
+              <td width="100">昌吉市 宁边路街道北庭新村社区</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">1</td>
+              <td class="tc">是</td>
+              <td>测试</td>
+              <td>张三</td>
+              <td class="tc">21</td>
+              <td class="tc">11</td>
+              <td class="tc" width="70">2019-05-06 20:15</td>
+              <td class="tc">已审核</td>
+              <td class="tc">尚未提交</td>
+              <td class="tc"><a href="#" class="btn btn_see">查看</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <div class="not_act">上一页</div>
+          <div class="act">1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>...</div>
+          <div>10</div>
+          <div>下一页</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/vue/httpVueLoader.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.datetimepicker.full.min.js"></script>
+<script>
+  $(function () {
+    $.datetimepicker.setLocale('zh');
+    $('.datetime').each(function () {
+      $(this).datetimepicker({
+        format: "Y-m-d",
+        timepicker: false
+      });
+    })
+  })
+
+  new Vue({
+    el: "#list",
+    components: {
+      'headercomponents': httpVueLoader('../components/headerComponents.vue'),
+    },
+    data() {
+      return {
+
+      }
+    },
+    created() {},
+    watch: {
+
+    },
+    mounted() {
+
+    },
+    methods: {
+      // 返回主页
+      goback() {
+        window.location.href = "index.html"
+      }
+    }
+  })
+</script>
+
+</html>

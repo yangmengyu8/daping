@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>昌吉州基层党建标准化规范化智能管理系统</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/chart.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="main" v-cloak>
+    <!-- 头部 -->
+    <headercomponents></headercomponents>
+    <div class="main">
+      <div class="top">
+        <span>三会一课（支部党员大会）</span><a href="#" class="btn btn_interaction">信息互动</a>
+        <!-- <a href="#"
+          class="btn btn_all">全部</a> -->
+        <a href="list.html" class="btn btn_chart">列表模式</a>
+      </div>
+
+      <div class="chart_content">
+        <div class="column">
+          <div class="column_box1">
+            <div class="title">三会一课（支部委员会）开展情况</div>
+            <div id="line" class="echarts"></div>
+            <div class="chart"></div>
+          </div>
+          <div class="column_box1">
+            <div class="title">三会一课开展场次</div>
+            <div>
+              <div id="bar1" class="echarts"></div>
+              <div class="chart"></div>
+            </div>
+
+          </div>
+        </div>
+        <div class="column">
+          <div class="title">流动党员参会人次</div>
+          <div id="bar2" class="echarts"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column">
+          <div class="column_box2">
+            <div class="title">该模块工作未完成社区</div>
+            <div class="search">
+              <input type="search" name="data" placeholder="请输入搜索内容..."><button>搜索</button>
+            </div>
+            <div class="list">
+              <table>
+                <tr>
+                  <td>序号</td>
+                  <td>县市名称</td>
+                  <td>乡镇名称</td>
+                  <td>社区名称</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="column_box2">
+            <div class="title">社区排名情况</div>
+            <div class="list">
+              <table>
+                <tr>
+                  <td>排名</td>
+                  <td>县市名称</td>
+                  <td>乡镇名称</td>
+                  <td>社区名称</td>
+                  <td>扣分</td>
+                  <td>环比上升</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                  <td>0</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                  <td>0</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                  <td>0</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                  <td>0</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                  <td>0</td>
+                  <td>8%</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>昌吉市</td>
+                  <td>滨湖镇</td>
+                  <td>xxx社区</td>
+                  <td>0</td>
+                  <td>8%</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/chart.js"></script>
+<script src="../js/jquery1.42.min.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/vue/httpVueLoader.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  new Vue({
+    el: "#main",
+    components: {
+      'headercomponents': httpVueLoader('../components/headerComponents.vue'),
+    },
+    data() {
+      return {
+
+      }
+    },
+    created() {},
+    mounted() {
+      getEchartsBar1()
+      getEchartsBar2()
+      getEchartsLine1()
+    },
+    watch: {
+
+    },
+    methods: {
+
+    }
+  })
+</script>
+
+</html>
