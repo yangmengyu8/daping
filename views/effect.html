@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>效果分析</title>
+  <link rel="stylesheet" href="../css/effect.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="team" v-cloak>
+    <div class="show-time" id="localtime"></div>
+    <!-- 主体 -->
+    <section class="mainbox">
+      <!-- column1 -->
+      <div class="column">
+        <div class="column_box1">
+          <div class="head_style">
+            <div class="font_style">县市排名</div>
+          </div>
+          <div class="sort">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+          </div>
+          <div id="bar1" class="echarts_style" style="margin-top: .234375rem;"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style">
+            <div class="font_style">乡镇排名</div>
+          </div>
+          <div class="list1">
+            <table>
+              <tr>
+                <td><span>1</span></td>
+                <td>奇台县 古城乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>2</span></td>
+                <td>昌吉市 阿什里乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>3</span></td>
+                <td>奇台县 乔仁哈萨克族乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>4</span></td>
+                <td>昌吉市 绿洲路街道</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>5</span></td>
+                <td>吉木萨尔县 二工镇</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>6</span></td>
+                <td>昌吉市 硫磺沟镇</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>7</span></td>
+                <td>奇台县 老奇台县</td>
+                <td>-2.53</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style">
+            <div class="font_style">完成靠前的五项工作</div>
+          </div>
+          <div class="list">
+            <table>
+              <tr>
+                <td>序号</td>
+                <td>工作内容</td>
+                <td>分值</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>主题党日</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>软弱涣散党组织</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>主题党日</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>软弱涣散党组织</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- column2 -->
+      <div class="column">
+        <div class="column_box2">
+          <div class="top">
+            <ul class="clearfix">
+              <li><a href="dataAnalysis.html">
+                  <div class="title">数据分析</div>
+                </a></li>
+              <li><a href="propress.html">
+                  <div class="title">进度分析</div>
+                </a></li>
+              <li><a href="effect.html" class="act">
+                  <div class="title">效果分析</div>
+                </a></li>
+              <li><a href="service.html">
+                  <div class="title">三双一服务</div>
+                </a></li>
+              <li><a href="sendOrder.html">
+                  <div class="title">派单接单</div>
+                </a></li>
+              <li><a href="teamBuilding.html">
+                  <div class="title">队伍建设</div>
+                </a></li>
+              <li><a href="villagersTalk.html">
+                  <div class="title">村民说事</div>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column_box2">
+          <div class="head_style" style="padding-top: .390625rem;padding-left: .625rem;">
+            <div class="font_style">工作落实情况</div>
+          </div>
+          <div class="top2">
+            <ul class="clearfix">
+              <li><a href="javascript:;">
+                  <div class="title">升序降序</div>
+                </a></li>
+              <li><a href="javascript:;" class="dis">
+                  <div class="title">对比</div>
+                </a></li>
+            </ul>
+          </div>
+          <div id="pie" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- column3 -->
+      <div class="column">
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">村排名</div>
+          </div>
+          <div class="list1">
+            <table>
+              <tr>
+                <td><span>1</span></td>
+                <td>奇台县 古城乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>2</span></td>
+                <td>昌吉市 阿什里乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>3</span></td>
+                <td>奇台县 乔仁哈萨克族乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>4</span></td>
+                <td>昌吉市 绿洲路街道</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>5</span></td>
+                <td>吉木萨尔县 二工镇</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>6</span></td>
+                <td>昌吉市 硫磺沟镇</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>7</span></td>
+                <td>奇台县 老奇台县</td>
+                <td>-2.53</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">社区排名</div>
+          </div>
+          <div class="list1">
+            <table>
+              <tr>
+                <td><span>1</span></td>
+                <td>奇台县 古城乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>2</span></td>
+                <td>昌吉市 阿什里乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>3</span></td>
+                <td>奇台县 乔仁哈萨克族乡</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>4</span></td>
+                <td>昌吉市 绿洲路街道</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>5</span></td>
+                <td>吉木萨尔县 二工镇</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>6</span></td>
+                <td>昌吉市 硫磺沟镇</td>
+                <td>-2.53</td>
+              </tr>
+              <tr>
+                <td><span>7</span></td>
+                <td>奇台县 老奇台县</td>
+                <td>-2.53</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">完成靠后的五项工作</div>
+          </div>
+          <div class="list">
+            <table>
+              <tr>
+                <td>序号</td>
+                <td>工作内容</td>
+                <td>分值</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>主题党日</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>软弱涣散党组织</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>主题党日</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>软弱涣散党组织</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/effect.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/common.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  $(function () {
+    $('.top ul li a').on('click', function () {
+      $('.top ul li a').removeClass('act');
+      $(this).addClass('act');
+    })
+  })
+  $(function () {
+    $('.top2 ul li a').on('click', function () {
+      $('.top2 ul li a').removeClass('dis');
+      $(this).addClass('dis');
+    })
+  })
+  new Vue({
+    el: "#team",
+    data() {
+      return {
+        data: [{
+            name: '村干部',
+            num: '30'
+          }, {
+            name: '社区干部',
+            num: '30'
+          }, {
+            name: '工作队伍',
+            num: '30'
+          }, {
+            name: '村干部1',
+            num: '30'
+          },
+          {
+            name: '村干部2',
+            num: '30'
+          }
+        ],
+      }
+    },
+    created() {
+      tick()
+    },
+    watch: {
+
+    },
+    mounted() {
+      keyData1()
+      keyData2()
+    },
+    methods: {}
+  })
+</script>
+
+</html>

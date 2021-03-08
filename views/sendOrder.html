@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>派单接单</title>
+  <link rel="stylesheet" href="../css/sendOrder.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="team" v-cloak>
+    <div class="show-time" id="localtime"></div>
+    <!-- 主体 -->
+    <section class="mainbox">
+      <!-- column1 -->
+      <div class="column">
+        <div class="column_box1">
+          <div class="head_style" style="padding: .125rem 0 0 .4375rem;">
+            <div class="font_style">基本情况</div>
+          </div>
+          <div class="status">
+            <div class="status_1">
+              <p><img src="../img/send.png"><span>154</span></p>
+              <span>接单派单总数</span>
+            </div>
+            <div class="status_2" style="margin-left: 1.5625rem;">
+              <div id="pie2" class="echarts_style"></div>
+              <div class="chart"></div>
+              <div class="name">未办结</div>
+            </div>
+            <div class="status_2" style="margin-left: 3.125rem;">
+              <div id="pie3" class="echarts_style"></div>
+              <div class="chart"></div>
+              <div class="name">已办结</div>
+            </div>
+          </div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style" style="padding: .125rem 0 0 .4375rem;">
+            <div class="font_style">来源途经</div>
+          </div>
+          <div id="bar1" class="echarts_style" style="margin-top: .234375rem;"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style" style="padding: .15625rem 0 0 .4375rem;">
+            <div class="font_style">群众满意度</div>
+          </div>
+          <div id="pie" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- column2 -->
+      <div class="column">
+        <div class="column_box2">
+          <div class="top">
+            <ul class="clearfix">
+              <li><a href="dataAnalysis.html">
+                  <div class="title">数据分析</div>
+                </a></li>
+              <li><a href="propress.html">
+                  <div class="title">进度分析</div>
+                </a></li>
+              <!-- 2021-3-8 -->
+              <li><a href="effect.html">
+                  <div class="title">效果分析</div>
+                </a></li>
+              <!-- 2021-3-8 -->
+              <li><a href="service.html">
+                  <div class="title">三双一服务</div>
+                </a></li>
+              <li><a href="sendOrder.html" class="act">
+                  <div class="title">派单接单</div>
+                </a></li>
+              <li><a href="teamBuilding.html">
+                  <div class="title">队伍建设</div>
+                </a></li>
+              <li><a href="villagersTalk.html">
+                  <div class="title">村民说事</div>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column_box2">
+          <div class="head_style" style="padding-top: .390625rem;">
+            <div class="font_style">派单类别</div>
+          </div>
+          <div class="send">
+            <div class="send_1">
+              <div class="name" style="margin-top: .3125rem;">执法类统计</div>
+              <div id="bar2" class="echarts_style" style="height: 70%;"></div>
+              <div class="chart"></div>
+            </div>
+            <div class="send_1">
+              <div class="name">群众困难诉求类统计</div>
+              <div id="bar3" class="echarts_style" style="height: 70%;"></div>
+              <div class="chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- column3 -->
+      <div class="column">
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">派单数量走势图</div>
+          </div>
+          <div id="line" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">部门接单情况</div>
+          </div>
+          <div class="list">
+            <table>
+              <tr>
+                <td>排序</td>
+                <td>县市名称</td>
+                <td>单位名称</td>
+                <td>接单数量</td>
+                <td>办结数量</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>昌吉市</td>
+                <td>城市管理局</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/sendOrder.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/common.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  $(function () {
+    $('.top ul li a').on('click', function () {
+      $('.top ul li a').removeClass('act');
+      $(this).addClass('act');
+    })
+  })
+  new Vue({
+    el: "#team",
+    data() {
+      return {
+        data: [{
+            name: '村干部',
+            num: '30'
+          }, {
+            name: '社区干部',
+            num: '30'
+          }, {
+            name: '工作队伍',
+            num: '30'
+          }, {
+            name: '村干部1',
+            num: '30'
+          },
+          {
+            name: '村干部2',
+            num: '30'
+          }
+        ],
+        radio: '法律顾问',
+        dataList: ['法律顾问', '寺管会主任', '工作队成员', '两代表一委员',
+          '站所干部', '说事干部', '乡镇领导', '基层人员', '村两委干部', '四老人员', '县市包村领导', '其他'
+        ]
+      }
+    },
+    created() {
+      tick()
+    },
+    watch: {
+
+    },
+    mounted() {
+      keyData1()
+      keyData2()
+      keyData3()
+      echartsPie()
+      echartsPie2()
+      echartsPie3()
+      echartsline()
+    },
+    methods: {
+      getSelectValue(e) {
+        console.log(e);
+      }
+    }
+  })
+</script>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>进度分析</title>
+  <link rel="stylesheet" href="../css/propress.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="team" v-cloak>
+    <div class="show-time" id="localtime"></div>
+    <!-- 主体 -->
+    <section class="mainbox">
+      <!-- column1 -->
+      <div class="column">
+        <div class="column_box1">
+          <div class="head_style">
+            <div class="font_style">支部党员大会</div>
+          </div>
+          <div id="bar1" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style">
+            <div class="font_style">支委会</div>
+          </div>
+          <div id="bar2" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style">
+            <div class="font_style">党员小组</div>
+          </div>
+          <div id="bar3" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- column2 -->
+      <div class="column">
+        <div class="column_box2">
+          <div class="top">
+            <ul class="clearfix">
+              <li><a href="dataAnalysis.html">
+                  <div class="title">数据分析</div>
+                </a></li>
+              <li><a href="propress.html" class="act">
+                  <div class="title">进度分析</div>
+                </a></li>
+              <!-- 2021-3-8 -->
+              <li><a href="effect.html">
+                  <div class="title">效果分析</div>
+                </a></li>
+              <!-- 2021-3-8 -->
+              <li><a href="service.html">
+                  <div class="title">三双一服务</div>
+                </a></li>
+              <li><a href="sendOrder.html">
+                  <div class="title">派单接单</div>
+                </a></li>
+              <li><a href="teamBuilding.html">
+                  <div class="title">队伍建设</div>
+                </a></li>
+              <li><a href="villagersTalk.html">
+                  <div class="title">村民说事</div>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column_box2">
+          <div class="head_style" style="padding-top: .390625rem;padding-left: .625rem;">
+            <div class="font_style">主题党日</div>
+          </div>
+          <div id="bar4" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box2">
+          <div class="head_style" style="padding-top: .390625rem;padding-left: .625rem;">
+            <div class="font_style">四议两公开</div>
+          </div>
+          <div id="bar5" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- column3 -->
+      <div class="column">
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">党课</div>
+          </div>
+          <div id="bar6" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">组织生活</div>
+          </div>
+          <div id="bar7" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">党员民主评议</div>
+          </div>
+          <div id="bar8" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/propress.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/common.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  $(function () {
+    $('.top ul li a').on('click', function () {
+      $('.top ul li a').removeClass('act');
+      $(this).addClass('act');
+    })
+  })
+  new Vue({
+    el: "#team",
+    data() {
+      return {
+        data: [{
+            name: '村干部',
+            num: '30'
+          }, {
+            name: '社区干部',
+            num: '30'
+          }, {
+            name: '工作队伍',
+            num: '30'
+          }, {
+            name: '村干部1',
+            num: '30'
+          },
+          {
+            name: '村干部2',
+            num: '30'
+          }
+        ],
+      }
+    },
+    created() {
+      tick()
+    },
+    watch: {
+
+    },
+    mounted() {
+      keyData1()
+      keyData2()
+      keyData3()
+      keyData4()
+      keyData5()
+      keyData6()
+      keyData7()
+      keyData8()
+    },
+    methods: {}
+  })
+</script>
+
+</html>

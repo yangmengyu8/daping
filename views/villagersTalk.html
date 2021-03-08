@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>队伍建设</title>
+  <link rel="stylesheet" href="../css/villagersTalk.css">
+  <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
+</head>
+
+<body>
+  <div id="team" v-cloak>
+    <div class="show-time" id="localtime"></div>
+    <!-- 主体 -->
+    <section class="mainbox">
+      <!-- column1 -->
+      <div class="column">
+        <div class="column_box1">
+          <div class="head_style" style="padding: .125rem 0 0 .4375rem;">
+            <div class="font_style">村民说事累计</div>
+          </div>
+          <div class="num_b">
+            <div class="num_b_1">0</div>
+            <div class="num_b_1">0</div>
+            <div class="num_b_1">2</div>
+            <div class="num_b_1">4</div>
+          </div>
+        </div>
+        <div class="column_box1">
+          <div class="head_style" style="padding: .15625rem 0 0 .4375rem;">
+            <div class="font_style">现时办结条数</div>
+          </div>
+          <div class="vt">
+            <div class="vt_1">
+              <div id="bar1" class="echarts_style" style="margin-top: .46875rem;"></div>
+              <div class="chart"></div>
+            </div>
+            <div class="vt_1">
+              <div id="pie" class="echarts_style"></div>
+              <div class="chart"></div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- column2 -->
+      <div class="column">
+        <div class="column_box2">
+          <div class="top">
+            <ul class="clearfix">
+              <li><a href="dataAnalysis.html">
+                  <div class="title">数据分析</div>
+                </a></li>
+              <li><a href="propress.html">
+                  <div class="title">进度分析</div>
+                </a></li>
+              <!-- 2021-3-8 -->
+              <li><a href="effect.html">
+                  <div class="title">效果分析</div>
+                </a></li>
+              <!-- 2021-3-8 -->
+              <li><a href="service.html">
+                  <div class="title">三双一服务</div>
+                </a></li>
+              <li><a href="sendOrder.html">
+                  <div class="title">派单接单</div>
+                </a></li>
+              <li><a href="teamBuilding.html">
+                  <div class="title">队伍建设</div>
+                </a></li>
+              <li><a href="villagersTalk.html" class="act">
+                  <div class="title">村民说事</div>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column_box2">
+          <div class="head_style" style="padding-top: .390625rem;">
+            <div class="font_style">参加人次</div>
+          </div>
+          <div class="radio_style">
+            <el-radio-group v-model="radio" @change="getSelectValue">
+              <el-radio v-for="item in dataList" :label="item">{{item}}</el-radio>
+            </el-radio-group>
+          </div>
+          <div id="bar2" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- column3 -->
+      <div class="column">
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">村数</div>
+          </div>
+          <div id="bar3" class="echarts_style"></div>
+          <div class="chart"></div>
+        </div>
+        <div class="column_box3">
+          <div class="head_style">
+            <div class="font_style">解答、办结数据</div>
+          </div>
+          <div id="bar4" class="echarts_style" style="margin-top: .234375rem;"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+<script src="../js/flexible.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/villagersTalk.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../js/common.js"></script>
+<script src="../css/elementUI/lib-master/index.js"></script>
+<script>
+  $(function () {
+    $('.top ul li a').on('click', function () {
+      $('.top ul li a').removeClass('act');
+      $(this).addClass('act');
+    })
+  })
+  new Vue({
+    el: "#team",
+    data() {
+      return {
+        data: [{
+            name: '村干部',
+            num: '30'
+          }, {
+            name: '社区干部',
+            num: '30'
+          }, {
+            name: '工作队伍',
+            num: '30'
+          }, {
+            name: '村干部1',
+            num: '30'
+          },
+          {
+            name: '村干部2',
+            num: '30'
+          }
+        ],
+        radio: '法律顾问',
+        dataList: ['法律顾问', '寺管会主任', '工作队成员', '两代表一委员',
+          '站所干部', '说事干部', '乡镇领导', '基层人员', '村两委干部', '四老人员', '县市包村领导', '其他'
+        ]
+      }
+    },
+    created() {
+      tick()
+    },
+    watch: {
+
+    },
+    mounted() {
+      keyData1()
+      keyData2()
+      keyData3()
+      keyData4()
+      echartsPie()
+    },
+    methods: {
+      getSelectValue(e) {
+        console.log(e);
+      }
+    }
+  })
+</script>
+
+</html>

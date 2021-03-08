@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+/*将标签原有的默认内外边距去掉*/
+
+fieldset,
+img,
+input,
+button {
+  border: none;
+  /*去掉边框*/
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+  /*去掉环绕边框*/
+}
+
+ul,
+ol {
+  list-style: none;
+  /*去掉原样式中的小黑点*/
+  /*ctrl+alt+l*/
+}
+
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+select,
+input {
+  vertical-align: middle;
+  /*输入字居中显示*/
+}
+
+select,
+input,
+textarea {
+  font-size: 0.21875rem;
+  margin: 0;
+}
+
+/**/
+textarea {
+  resize: none;
+  /*防止拖动*/
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  /*  去掉图片底部默认的3像素空白缝隙*/
+}
+
+table {
+  border-collapse: collapse;
+  /*合并外边线*/
+}
+
+/* 谷歌滚动调样式 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5bc0de
+}
+
+[v-cloak] {
+  display: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  background: url(../img/bg.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+
+.show-time {
+  position: absolute;
+  top: .6rem;
+  left: .2rem;
+  color: #19B7F5;
+  font-size: 0.25rem;
+}
+
+.mainbox {
+  display: flex;
+  margin: 0 auto;
+}
+
+.mainbox .column:nth-child(1) {
+  flex: 2.5;
+  margin-top: 1.171875rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh;
+}
+
+.mainbox .column:nth-child(2) {
+  flex: 5;
+  margin-top: 1.171875rem;
+  margin-right: .125rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh;
+}
+
+.mainbox .column:nth-child(3) {
+  flex: 2.5;
+  margin-top: 1.171875rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 88vh;
+  
+}
+
+.mainbox .column .column_box1:nth-child(1) {
+  flex: 5;
+  background: url(../img/border_t1.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+
+.mainbox .column .column_box1:nth-child(2) {
+  flex: 5;
+  margin-top: .15625rem;
+  background: url(../img/border_t1.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+
+.mainbox .column .column_box2:nth-child(1) {
+  flex: 0.2;
+}
+
+.mainbox .column .column_box2:nth-child(2) {
+  flex: 4.4;
+  background: url(../img/border_t2.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+
+.mainbox .column .column_box2:nth-child(3) {
+  flex: 4.4;
+  margin-top: .15625rem;
+  background: url(../img/border_t2.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+
+.mainbox .column .column_box3:nth-child(1) {
+  flex: 5;
+  background: url(../img/border_t1.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+
+.mainbox .column .column_box3:nth-child(2) {
+  flex: 5;
+  margin-top: .15625rem;
+  background: url(../img/border_t1.png) no-repeat top center;
+  background-size: 100% 100%;
+}
+.cb{
+  display: flex;
+  flex-flow: column;
+  height: 80%;
+}
+.cb_1{
+  flex: 5;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.cb_2{
+  flex: 5;
+  margin-top: -0.625rem;
+}
+.cb_1_1{
+  flex: 5;
+}
+
+
+
+/* 边框头部样式 */
+.head_style {
+  color: #FFFFFF;
+  font-size: .21875rem;
+  padding: .3125rem 0 0 .46875rem;
+  letter-spacing: 2px;
+}
+
+.font_style {
+  margin: 0 0 -1px 5px;
+  color: #48CBFF;
+}
+
+/* Echarts样式 */
+.echarts_style {
+  width: 90%;
+  height: 80%;
+  margin-left: 0.3125rem;
+}
+
+/* 中间头部样式 */
+
+.top ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.top ul li {
+  display: block;
+  float: left;
+  margin-left: .546875rem;
+}
+
+.top ul li:nth-child(1),
+.top ul li:nth-child(2),
+.top ul li:nth-child(3),
+.top ul li:nth-child(4),
+.top ul li:nth-child(5) {
+  margin-bottom: .3125rem;
+}
+
+.top ul li:nth-child(6) {
+  margin-left: 34%;
+}
+
+.top ul li a {
+  display: block;
+  background: url(../img/c1.png) no-repeat top center;
+  background-size: 100% 100%;
+  color: #FFFFFF;
+  font-size: .21875rem;
+  font-weight: 600;
+  padding: .234375rem .390625rem;
+  border-radius: 6px;
+}
+
+.top ul li a.act,
+.top ul li a:hover {
+  background: url(../img/c0.png) no-repeat top center;
+  background-size: 100% 100%;
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+.echarts_box .title {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: .28125rem;
+  font-weight: bold;
+  margin-top: 0px;
+}
