@@ -5,270 +5,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>昌吉州基层党建标准化规范化智能管理系统</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/elementUI/lib-master/theme-chalk/index.css" />
+  <link rel="stylesheet" href="css/animation.css" />
 </head>
 
 <body>
-  <div id="app" v-cloak>
-    <!-- 头部 -->
-    <headercomponents></headercomponents>
-    <!-- 左侧菜单 -->
-    <div class="nav" id="nav" @mouseover="mouseOver"></div>
-    <div class="menu_hidden" id="menu_hidden" @mouseleave="mouseLeave">
-      <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
-        <el-submenu index="1">
-          <template slot="title">
-            <i class="el-icon-my-export"></i>
-            <span style="line-height: .625rem;">实现精准管理</span>
-          </template>
-          <el-submenu index="1-4">
-            <template slot="title">人口管理</template>
-            <el-submenu index="1-5">
-              <template slot="title">下沉干部队伍</template>
-              <el-menu-item index="1-5-1">下沉队伍</el-menu-item>
-              <el-menu-item index="1-5-2">下沉队伍</el-menu-item>
-              <el-menu-item index="1-5-3">下沉队伍</el-menu-item>
-            </el-submenu>
-            <el-submenu index="1-6">
-              <template slot="title">下沉干部</template>
-            </el-submenu>
-            <el-submenu index="1-7">
-              <template slot="title">下沉记录</template>
-            </el-submenu>
-          </el-submenu>
-        </el-submenu>
-        <el-menu-item index="2">
-          <i class="el-icon-my-crowd"></i>
-          <span slot="title" style="line-height: .625rem;">做好群众工作</span>
-        </el-menu-item>
-        <el-menu-item index="3">
-          <i class="el-icon-my-fort"></i>
-          <span slot="title" style="line-height: .625rem;">筑牢坚强堡垒</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <i class="el-icon-my-team"></i>
-          <span slot="title" style="line-height: .625rem;">打造过硬队伍</span>
-        </el-menu-item>
-      </el-menu>
+  <div id="animation" v-cloak>
+    <img class="logo" src="img/a-logo.png">
+    <img class="show" id="show" src="img/animation4.gif">
+    <div class="type_title" id="type_title">
+      <div class="p1" @click="open('1')">科学分析</div>
+      <div class="p2" @click="open('2')">农村党建</div>
+      <div class="p3" @click="open('3')">社区党建</div>
+      <div class="p4" @click="open('4')">乡镇街道</div>
+      <div class="p5" @click="open('5')">综合应用</div>
     </div>
-    <!-- 主体 -->
-    <section class="mainbox">
-      <!-- column1 -->
-      <div class="column">
-        <div class="column_box1">
-          <div class="box1_top">
-            <div class="num_bg1">
-              <div class="num_bg_img">
-                <img src="images/bg1_1.png" width="60">
-                <span>村数量</span>
-              </div>
-              <div class="num_bg_num">5564</div>
-            </div>
-            <div class="num_bg2">
-              <div class="num_bg_img">
-                <img src="images/bg2_2.png" width="60">
-                <span>党组织数</span>
-              </div>
-              <div class="num_bg_num">5564</div>
-            </div>
-          </div>
-          <div class="box1_bottom">
-            <div class="num_bg3">
-              <div class="num_bg_img">
-                <img src="images/bg3_3.png" width="60">
-                <span>党员数量</span>
-              </div>
-              <div class="num_bg_num">5564</div>
-            </div>
-            <div class="num_bg4">
-              <div class="num_bg_img">
-                <img src="images/bg4_4.png" width="60">
-                <span>扣分占有率</span>
-              </div>
-              <div class="num_bg_num">5564</div>
-            </div>
-          </div>
-        </div>
-        <div class="column_box1">
-          <div id="slideBox" class="slideBox">
-            <div class="hd">
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="bd">
-              <ul>
-                <li>
-                  <div class="tpxw_img">
-                    <img src="images/sroll.png" />
-                  </div>
-                  <div class="tpxw_tit1">
-                    <p>党旗映天山主题党日活动</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="tpxw_img">
-                    <img src="images/sroll.png" />
-                  </div>
-                  <div class="tpxw_tit1">
-                    <p>党旗映天山主题党日活动</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="tpxw_img">
-                    <img src="images/sroll.png" />
-                  </div>
-                  <div class="tpxw_tit1">
-                    <p>党旗映天山主题党日活动</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- column2 -->
-      <div class="column">
-        <div class="column_box2">
-          <div class="map">
-            <div class="column_box2_title">昌吉回族自治州</div>
-            <div class="location1"></div>
-            <div class="location1-1" @click="handclick('1')">呼图壁县</div>
-            <div class="location2"></div>
-            <div class="location2-1" @click="handclick('1')">玛纳斯县</div>
-            <div class="location3"></div>
-            <div class="location3-1" @click="handclick('1')">昌吉市</div>
-            <div class="location4"></div>
-            <div class="location4-1" @click="handclick('1')">阜康市</div>
-            <div class="location5"></div>
-            <div class="location5-1" @click="handclick('1')">吉木萨尔县</div>
-            <div class="location6"></div>
-            <div class="location6-1" @click="handclick('1')">奇台县</div>
-            <div class="location7"></div>
-            <div class="location7-1" @click="handclick('1')">木垒哈萨克自治州</div>
-          </div>
-        </div>
-        <div class="column_box2">
-          <div class="title"><img src="images/echarts.png"><span>三务公开</span></div>
-          <div class="workNum">
-            <div id="bar" class="echarts_style"></div>
-            <div class="chart"></div>
-          </div>
-        </div>
-      </div>
-      <!-- column3 -->
-      <div class="column">
-        <div class="column_box3">
-          <div class="title"><img src="images/alarm.png" width="30"><span>通知公告</span></div>
-          <div class="list">
-            <table>
-              <tr>
-                <td><img src="images/list_head_photo.png" width="30" alt=""></td>
-                <td>三务公开</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="images/list_head_photo.png" width="30" alt=""></td>
-                <td>支部党员大会</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="images/list_head_photo.png" width="30" alt=""></td>
-                <td>三务公开</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="images/list_head_photo.png" width="30" alt=""></td>
-                <td>支部党员大会</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="images/list_head_photo.png" width="30" alt=""></td>
-                <td>三务公开</td>
-                <td>2020-11-21</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="column_box3">
-          <div class="title"><img src="images/love.png"><span>访惠聚在岗人数</span></div>
-          <div class="working_bg">123</div>
-          <div class="working_title">在岗人数</div>
-        </div>
-      </div>
-    </section>
-
   </div>
 </body>
 <script src="js/flexible.js"></script>
-<script src="js/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-<script src="js/echarts-gl.min.js"></script>
-<script src="js/index.js"></script>
 <script src="js/jquery1.42.min.js"></script>
-<script src="js/jquery.SuperSlide.2.1.3.js"></script>
 <script src="js/vue/vue.js"></script>
-<script src="js/vue/httpVueLoader.js"></script>
-<script src="css/elementUI/lib-master/index.js"></script>
 <script>
   new Vue({
-    el: "#app",
-    components: {
-      'headercomponents': httpVueLoader('components/headerComponents.vue'),
-    },
+    el: "#animation",
     data() {
-      return {
-        isCollapse: true
-      }
+      return {}
     },
-    created() {},
+    created() {
+      this.play()
+    },
+    mounted() {},
     watch: {
 
     },
-    mounted() {
-      this.slide()
-      workNum()
-    },
     methods: {
-      slide() {
-        jQuery(".slideBox").slide({
-          mainCell: ".bd ul",
-          autoPlay: true,
-          effect: "fold",
-          delayTime: 700
-        });
+      play() {
+        this.timer = setTimeout(() => {
+          document.body.style.backgroundImage = "url(img/animation2.gif)";
+          const show = document.getElementById("show")
+          show.style.visibility = "visible"
+          const title = document.getElementById("type_title")
+          title.style.visibility = "visible"
+        }, 6000)
       },
-      handleOpen(key, keyPath) {
-        // console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        // console.log(key, keyPath);
-      },
-      mouseOver() {
-        const menu = document.getElementById("menu_hidden")
-        menu.style.visibility = "visible"
-        const nav = document.getElementById("nav")
-        nav.style.visibility = "hidden"
-      },
-      mouseLeave() {
-        const menu = document.getElementById("menu_hidden")
-        menu.style.visibility = "hidden"
-        const nav = document.getElementById("nav")
-        nav.style.visibility = "visible"
-      },
-      mouseOverSetting() {
-        const menu = document.getElementById("dropdown")
-        menu.style.visibility = "visible"
-      },
-      mouseLeaveSetting() {
-        const menu = document.getElementById("dropdown")
-        menu.style.visibility = "hidden"
-      },
-      handclick(data) {
-        alert('开发中...')
+      open() {
+        window.location.href = '../views/index.html';
       }
     }
   })
