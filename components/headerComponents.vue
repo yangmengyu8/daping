@@ -109,6 +109,7 @@ header{
   background-size: 100% 100%;
   display: flex;
   flex-flow: row nowrap;
+  border-bottom: 2px solid red;
 }
 header .logo{
   background: url('../images/logo.png') no-repeat left;
