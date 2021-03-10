@@ -107,7 +107,7 @@ html {
 
 body {
   width: 100%;
-  background: url(img/animation5.gif) no-repeat top center;
+  background: url(../img/animation5.gif) no-repeat top center;
   background-size: 100% 100%;
 }
 #animation{
@@ -128,7 +128,7 @@ body {
   visibility: hidden;
 }
 .p1,.p2,.p3,.p4,.p5{
-  background: url(img/a-border1.png) no-repeat top center;
+  background: url(../img/a-border1.png) no-repeat top center;
   background-size: 100% 100%;
   position: absolute;
   width: 7.5rem;
@@ -144,7 +144,7 @@ body {
 .p3:hover,
 .p4:hover,
 .p5:hover{
-  background: url(img/a-border2.png) no-repeat top center;
+  background: url(../img/a-border2.png) no-repeat top center;
   background-size: 100% 100%;
 }
 .p1{
