@@ -4,12 +4,12 @@
       <div class="logo"></div>
       <div class="setting" @mouseover="mouseOverSetting">
         <div class="setting_bg">
-          <img src="images/head_photo.png" width="32">
+          <img src="../images/head_photo.png" width="32">
           <b>管理员</b>
           <span></span>
         </div>
       </div>
-      <a class="menu" href="views/menu.html"></a>
+      <a class="menu" href="menu.html"></a>
     </header>
 
     <div>
