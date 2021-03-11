@@ -4,8 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
   <title>昌吉州基层党建标准化规范化智能管理系统</title>
   <link rel="stylesheet" href="../css/index.css">
+  <!-- 2021-3-11 -->
+  <link rel="stylesheet" href="../css/liMarquee.css">
+  <!-- 2021-3-11 -->
   <link rel="stylesheet" href="../css/elementUI/lib-master/theme-chalk/index.css" />
 </head>
 
@@ -133,22 +137,31 @@
       <!-- column2 -->
       <div class="column">
         <div class="column_box2">
-          <div class="map">
+          <div class="map" id="map">
             <div class="column_box2_title">昌吉回族自治州</div>
+            <!-- 2021-3-11 -->
             <div class="location1"></div>
-            <div class="location1-1" @click="handclick('1')">呼图壁县</div>
+            <div class="location1-1" @click="getTownList('呼图壁县')">呼图壁县</div>
             <div class="location2"></div>
-            <div class="location2-1" @click="handclick('1')">玛纳斯县</div>
+            <div class="location2-1" @click="getTownList('玛纳斯县')">玛纳斯县</div>
             <div class="location3"></div>
-            <div class="location3-1" @click="handclick('1')">昌吉市</div>
+            <div class="location3-1" @click="getTownList('昌吉市')">昌吉市</div>
             <div class="location4"></div>
-            <div class="location4-1" @click="handclick('1')">阜康市</div>
+            <div class="location4-1" @click="getTownList('阜康市')">阜康市</div>
             <div class="location5"></div>
-            <div class="location5-1" @click="handclick('1')">吉木萨尔县</div>
+            <div class="location5-1" @click="getTownList('吉木萨尔县')">吉木萨尔县</div>
             <div class="location6"></div>
-            <div class="location6-1" @click="handclick('1')">奇台县</div>
+            <div class="location6-1" @click="getTownList('奇台县')">奇台县</div>
             <div class="location7"></div>
-            <div class="location7-1" @click="handclick('1')">木垒哈萨克自治州</div>
+            <div class="location7-1" @click="getTownList('木垒哈萨克自治州')">木垒哈萨克自治州</div>
+            <!-- 2021-3-11 -->
+          </div>
+
+          <div class="name" id="name">
+            <div class="name_a">
+              <div class="name_a_1" v-for="(item,index) in dataList2" :key="index" @click="getVillageList(item)">
+                {{item.name}}</div>
+            </div>
           </div>
         </div>
         <div class="column_box2">
@@ -163,39 +176,58 @@
       <div class="column">
         <div class="column_box3">
           <div class="title"><img src="../images/alarm.png" width="30"><span>通知公告</span></div>
-          <div class="list">
-            <table>
-              <tr>
-                <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
-                <td>三务公开</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
-                <td>支部党员大会</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
-                <td>三务公开</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
-                <td>支部党员大会</td>
-                <td>2020-11-21</td>
-              </tr>
-              <tr>
-                <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
-                <td>三务公开</td>
-                <td>2020-11-21</td>
-              </tr>
-            </table>
+          <!-- 2021-3-11 -->
+          <div class="dowebok">
+            <div class="list">
+              <table>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>三务公开</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>支部党员大会</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>三务公开</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>支部党员大会</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>三务公开</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>支部党员大会</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>三务公开</td>
+                  <td>2020-11-21</td>
+                </tr>
+                <tr>
+                  <td><img src="../images/list_head_photo.png" width="30" alt=""></td>
+                  <td>支部党员大会</td>
+                  <td>2020-11-21</td>
+                </tr>
+              </table>
+            </div>
           </div>
+          <!-- 2021-3-11 -->
         </div>
         <div class="column_box3">
           <div class="title"><img src="../images/love.png"><span>访惠聚在岗人数</span></div>
-          <div class="working_bg">123</div>
+          <div class="working_bg"><span>123</span></div>
           <div class="working_title">在岗人数</div>
         </div>
       </div>
@@ -205,15 +237,29 @@
 </body>
 <script src="../js/flexible.js"></script>
 <script src="../js/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+<!-- 2021-3-2 -->
+<script src="../js/echarts-gl.js"></script>
+<!-- 2021-3-2 -->
 <script src="../js/echarts-gl.min.js"></script>
 <script src="../js/index.js"></script>
-<script src="../js/jquery1.42.min.js"></script>
+<!-- 2021-3-11 -->
+<script src="../js/jquery-1.8.3.min.js"></script>
 <script src="../js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="../js/jquery.liMarquee.js"></script>
+<!-- 2021-3-11 -->
 <script src="../js/vue/vue.js"></script>
 <script src="../js/vue/httpVueLoader.js"></script>
 <script src="../css/elementUI/lib-master/index.js"></script>
+
 <script>
+  //2021-3-11
+  $(function () {
+    $('.dowebok').liMarquee({
+      direction: 'up',
+      scrollamount: 30
+    });
+  });
+  //2021-3-11
   new Vue({
     el: "#app",
     components: {
@@ -221,7 +267,258 @@
     },
     data() {
       return {
-        isCollapse: true
+        isCollapse: true,
+        // 2021-3-10
+        dataList: [{
+          name: '玛纳斯县',
+          children: [{
+            name: '包家店镇',
+            children: [{
+              name: '包家店村'
+            }, {
+              name: '皇工村'
+            }, {
+              name: '油坊庄村'
+            }, {
+              name: '黑梁湾村'
+            }, {
+              name: '塔西河村'
+            }, {
+              name: '冬麦地村'
+            }, {
+              name: '柴场村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '梁洲户镇',
+            children: [{
+              name: '五圣宫村'
+            }, {
+              name: '西凉州户村'
+            }, {
+              name: '庄浪户村'
+            }, {
+              name: '东凉州户村'
+            }, {
+              name: '太阳庙村'
+            }, {
+              name: '丰益工村'
+            }, {
+              name: '黑梁村'
+            }, {
+              name: '吕家庄村'
+            }, {
+              name: '新渠村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '六户地镇',
+            children: [{
+              name: '六户地村'
+            }, {
+              name: '杨家道村'
+            }, {
+              name: '土炮营村'
+            }, {
+              name: '陈家渠村'
+            }, {
+              name: '闯田地村'
+            }, {
+              name: '鸭洼坑村'
+            }, {
+              name: '三岔坪村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '旱卡子滩乡',
+            children: [{
+              name: '闽玛生态村'
+            }, {
+              name: '头墩台子村'
+            }, {
+              name: '东岸村'
+            }, {
+              name: '石灰窑子村'
+            }, {
+              name: '头渠村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '清水河乡',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '塔西河乡',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '玛纳斯镇',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '试验站',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '北五岔镇',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '广东地乡',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '兰州湾镇',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '乐土驿站',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            level: 1,
+            name: '返回'
+          }]
+        }],
+        dataList2: [],
+        tempList: []
+        // 2021-3-10
       }
     },
     created() {},
@@ -259,19 +556,44 @@
         const nav = document.getElementById("nav")
         nav.style.visibility = "visible"
       },
-      mouseOverSetting() {
-        const menu = document.getElementById("dropdown")
-        menu.style.visibility = "visible"
+      // 2021-3-10
+      getTownList(data) {
+        this.dataList.forEach(e => {
+          if (e.name == data) {
+            this.dataList2 = e.children
+            this.tempList = this.dataList2
+            const map = document.getElementById("map")
+            map.style.display = "none"
+            const name = document.getElementById("name")
+            name.style.display = "block"
+          }
+        });
       },
-      mouseLeaveSetting() {
-        const menu = document.getElementById("dropdown")
-        menu.style.visibility = "hidden"
-      },
-      handclick(data) {
-        alert('开发中...')
+      getVillageList(data) {
+        if (data.children) {
+          this.dataList2.forEach(e => {
+            if (e.name == data.name) {
+              this.dataList2 = e.children
+            }
+          });
+        }
+        if (data.level == 1) {
+          const map = document.getElementById("map")
+          map.style.display = "block"
+          const name = document.getElementById("name")
+          name.style.display = "none"
+        }
+        if (data.level == 2) {
+          this.dataList2 = this.tempList
+        }
       }
+      // 2021-3-10
     }
   })
+</script>
+
+<script>
+
 </script>
 
 </html>

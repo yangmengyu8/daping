@@ -168,3 +168,9 @@ body {
   top: 4.609375rem;
   left: 15.546875rem;
 }
+
+a {
+  text-decoration: none;
+  color: #f8c454;
+  font-size: .4375rem;
+}

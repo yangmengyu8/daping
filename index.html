@@ -13,11 +13,21 @@
     <img class="logo" src="img/a-logo.png">
     <img class="show" id="show" src="img/animation4.gif">
     <div class="type_title" id="type_title">
-      <div class="p1" @click="open('1')">科学分析</div>
-      <div class="p2" @click="open('2')">农村党建</div>
-      <div class="p3" @click="open('3')">社区党建</div>
-      <div class="p4" @click="open('4')">乡镇街道</div>
-      <div class="p5" @click="open('5')">综合应用</div>
+      <a href="dataAnalysis.html" target="_blank">
+        <div class="p1">科学分析</div>
+      </a>
+      <a href="index.html" target="_blank">
+        <div class="p2">农村党建</div>
+      </a>
+      <a href="index.html" target="_blank">
+        <div class="p3">社区党建</div>
+      </a>
+      <a href="index.html" target="_blank">
+        <div class="p4">乡镇街道</div>
+      </a>
+      <a href="index.html" target="_blank">
+        <div class="p5">综合应用</div>
+      </a>
     </div>
   </div>
 </body>
@@ -46,9 +56,6 @@
           const title = document.getElementById("type_title")
           title.style.visibility = "visible"
         }, 6000)
-      },
-      open() {
-        window.location.href = 'views/index.html';
       }
     }
   })

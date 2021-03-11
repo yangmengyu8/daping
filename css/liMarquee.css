@@ -1,0 +1,76 @@
+/*Plugin CSS*/
+.str_wrap {
+	overflow:hidden;
+	width:100%;
+	font-size:12px;
+	line-height:16px;
+	position:relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;  
+	background:#f6f6f6;
+	white-space:nowrap;
+}
+
+.str_wrap.str_active {
+	background:#f1f1f1;
+}
+.str_move { 
+	white-space:nowrap;
+	position:absolute; 
+	top:0; 
+	left:0;
+	cursor:pointer;
+}
+.str_move_clone {
+	display:inline-block;
+	/* display:inline;
+	zoom:1; */
+	vertical-align:top;
+	position:absolute; 
+	left:100%;
+	top:0;
+}
+.str_vertical .str_move_clone {
+	left:0;
+	top:100%;
+}
+.str_down .str_move_clone {
+	left:0;
+	bottom:100%;
+}
+.str_vertical .str_move,
+.str_down .str_move {
+	white-space:normal;
+	width:100%;
+}
+.str_static .str_move,
+.no_drag .str_move,
+.noStop .str_move{
+	cursor:pointer;
+}
+.str_wrap img {
+	max-width:none !important;	
+}
+
+/* 后加---滚动样式*/
+.dowebok {
+	width: 89%;
+	height: 80%;
+	margin-left: .3125rem;
+  margin-top: .703125rem;
+	font-size: 0.21875rem;
+	background-color: #FFFFFF;
+}
+
+.str_wrap {
+	background-color: #FFFFFF;
+}
+
+.str_wrap.str_active {
+	background-color: #FFFFFF;
+}
+
+.dowebok .str_wrap .str_vertical {
+	background-color: #FFFFFF;
+}

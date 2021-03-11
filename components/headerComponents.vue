@@ -2,7 +2,7 @@
     <div class="container">
       <header>
       <div class="logo"></div>
-      <div class="setting" @mouseover="mouseOverSetting">
+      <div class="setting" @mouseover="mouseOverSetting" @mouseleave="mouseLeaveSetting">
         <div class="setting_bg">
           <img src="../images/head_photo.png" width="32">
           <b>管理员</b>
@@ -13,7 +13,7 @@
     </header>
 
     <div>
-      <ul class="dropdown-menu" id="dropdown" @mouseleave="mouseLeaveSetting">
+      <ul class="dropdown-menu" id="dropdown" @mouseover="mouseOverSetting" @mouseleave="mouseLeaveSetting">
         <li><a href="javascript:void(0);"><i class="el-icon-chat-dot-square" id="tzgg_li"></i>&nbsp;消息</a></li>
         <li><a href="javascript:void(0);"><i class="el-icon-document"></i>&nbsp;通知公告(<span
               id="tzgg_nums_span">0</span>)</a></li>

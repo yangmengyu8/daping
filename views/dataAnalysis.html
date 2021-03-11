@@ -52,17 +52,16 @@
         <div class="column_box2">
           <div class="top">
             <ul class="clearfix">
-              <li><a href="dataAnalysis.html">
+              <!-- 2021-3-8 -->
+              <li><a href="dataAnalysis.html" class="act">
                   <div class="title">数据分析</div>
                 </a></li>
-              <li><a href="propress.html" class="act">
+              <li><a href="propress.html">
                   <div class="title">进度分析</div>
                 </a></li>
-              <!-- 2021-3-8 -->
               <li><a href="effect.html">
                   <div class="title">效果分析</div>
                 </a></li>
-              <!-- 2021-3-8 -->
               <li><a href="service.html">
                   <div class="title">三双一服务</div>
                 </a></li>
@@ -75,15 +74,17 @@
               <li><a href="villagersTalk.html">
                   <div class="title">村民说事</div>
                 </a></li>
+              <!-- 2021-3-8 -->
             </ul>
           </div>
         </div>
         <div class="column_box2">
-          <div class="map">
+          <!-- 2021-3-10 -->
+          <div class="map" id="map">
             <div class="location1"></div>
             <div class="location1-1">呼图壁县</div>
             <div class="location2"></div>
-            <div class="location2-1">玛纳斯县</div>
+            <div class="location2-1" @click="getTownList('玛纳斯县')">玛纳斯县</div>
             <div class="location3"></div>
             <div class="location3-1">昌吉市</div>
             <div class="location4"></div>
@@ -95,6 +96,13 @@
             <div class="location7"></div>
             <div class="location7-1">木垒哈萨克自治州</div>
           </div>
+          <div class="name" id="name">
+            <div class="name_a">
+              <div class="name_a_1" v-for="(item,index) in dataList2" :key="index" @click="getVillageList(item)">
+                {{item.name}}</div>
+            </div>
+          </div>
+          <!-- 2021-3-10 -->
         </div>
         <div class="column_box2">
           <div class="echarts">
@@ -196,6 +204,257 @@
             num: '30'
           }
         ],
+        /* 2021-3-10 */
+        dataList: [{
+          name: '玛纳斯县',
+          children: [{
+            name: '包家店镇',
+            children: [{
+              name: '包家店村'
+            }, {
+              name: '皇工村'
+            }, {
+              name: '油坊庄村'
+            }, {
+              name: '黑梁湾村'
+            }, {
+              name: '塔西河村'
+            }, {
+              name: '冬麦地村'
+            }, {
+              name: '柴场村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '梁洲户镇',
+            children: [{
+              name: '五圣宫村'
+            }, {
+              name: '西凉州户村'
+            }, {
+              name: '庄浪户村'
+            }, {
+              name: '东凉州户村'
+            }, {
+              name: '太阳庙村'
+            }, {
+              name: '丰益工村'
+            }, {
+              name: '黑梁村'
+            }, {
+              name: '吕家庄村'
+            }, {
+              name: '新渠村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '六户地镇',
+            children: [{
+              name: '六户地村'
+            }, {
+              name: '杨家道村'
+            }, {
+              name: '土炮营村'
+            }, {
+              name: '陈家渠村'
+            }, {
+              name: '闯田地村'
+            }, {
+              name: '鸭洼坑村'
+            }, {
+              name: '三岔坪村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '旱卡子滩乡',
+            children: [{
+              name: '闽玛生态村'
+            }, {
+              name: '头墩台子村'
+            }, {
+              name: '东岸村'
+            }, {
+              name: '石灰窑子村'
+            }, {
+              name: '头渠村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '清水河乡',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '塔西河乡',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '玛纳斯镇',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '试验站',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '北五岔镇',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '广东地乡',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '兰州湾镇',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            name: '乐土驿站',
+            children: [{
+              name: '牙湖村'
+            }, {
+              name: '红坑村'
+            }, {
+              name: '坎苏瓦特村'
+            }, {
+              name: '贝母房子村'
+            }, {
+              name: '团庄村'
+            }, {
+              name: '芦草沟村'
+            }, {
+              name: '乔亚巴斯陶村'
+            }, {
+              level: 2,
+              name: '返回'
+            }]
+          }, {
+            level: 1,
+            name: '返回'
+          }]
+        }],
+        dataList2: [],
+        tempList: []
+        /* 2021-3-10 */
       }
     },
     created() {
@@ -211,7 +470,40 @@
       keyData4()
       keyData5()
     },
-    methods: {}
+    methods: {
+      /* 2021-3-10 */
+      getTownList(data) {
+        this.dataList.forEach(e => {
+          if (e.name == data) {
+            this.dataList2 = e.children
+            this.tempList = this.dataList2
+            const map = document.getElementById("map")
+            map.style.display = "none"
+            const name = document.getElementById("name")
+            name.style.display = "block"
+          }
+        });
+      },
+      getVillageList(data) {
+        if (data.children) {
+          this.dataList2.forEach(e => {
+            if (e.name == data.name) {
+              this.dataList2 = e.children
+            }
+          });
+        }
+        if (data.level == 1) {
+          const map = document.getElementById("map")
+          map.style.display = "block"
+          const name = document.getElementById("name")
+          name.style.display = "none"
+        }
+        if (data.level == 2) {
+          this.dataList2 = this.tempList
+        }
+      }
+      /* 2021-3-10 */
+    }
   })
 </script>
 
