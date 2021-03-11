@@ -219,3 +219,7 @@ textarea{
   color: #ffffff;
   font-size: .21875rem;
 }
+
+.tables table tr:nth-child(even) {
+  background-color: #FDF0F0;
+}
