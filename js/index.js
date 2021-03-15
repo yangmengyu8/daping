@@ -1,101 +1,4 @@
 
-// 趋势图
-// function workNum () {
-//   const data1 = [320, 332, 301, 334];
-//   const data2 = [220, 182, 191, 234];
-//   const data3 = [150, 232, 201, 154];
-//   // 1. 实例化对象
-//   const myChart = echarts.init(document.getElementById('bar'));
-//   // 2.指定配置
-//   const option = {
-//     color: ['#79E8EF', '#F9691B', '#5D9AE2'],
-//     tooltip: {
-//       trigger: 'axis',
-//       axisPointer: {
-//         type: 'shadow'
-//       }
-//     },
-//     legend: {
-//       orient: 'vertical',
-//       left: 'right',
-
-//     },
-//     grid: {
-//       left: '0%',
-//       right: '0%',
-//       bottom: '2%',
-//       top: '10%',
-//       containLabel: true
-//     },
-//     calculable: true,
-//     xAxis: [
-//       {
-//         type: 'category',
-//         data: ['第一季度', '第二季度', '第三季度', '第四季度'],
-//         axisLine: {
-//           show: true, // 去除轴线
-//           lineStyle: {
-//             color: '#19B7F5'
-//           }
-//         },
-//         axisTick: {
-//           alignWithLabel: false,
-//           show: false
-//         },
-//         splitLine: {
-//           show: false
-//         }
-//       }
-//     ],
-//     yAxis: [
-//       {
-//         type: 'value',
-//         axisLine: {
-//           show: true, // 控制轴线
-//           lineStyle: {
-//             color: '#19B7F5'
-//           }
-//         },
-//         axisTick: {
-//           show: false // 控制刻度线
-//         },
-//         splitLine: {
-//           show: false // 控制平衡线
-//         },
-//       },
-//     ],
-//     series: [
-//       {
-//         name: '党务',
-//         type: 'bar',
-//         barGap: '80%',/*多个并排柱子设置柱子之间的间距*/
-//         barCategoryGap: '50%',/*多个并排柱子设置柱子之间的间距*/
-//         data: data1
-//       },
-//       {
-//         name: '村务',
-//         type: 'bar',
-//         barGap: '80%',/*多个并排柱子设置柱子之间的间距*/
-//         barCategoryGap: '50%',/*多个并排柱子设置柱子之间的间距*/
-//         data: data2
-//       },
-//       {
-//         name: '财务',
-//         type: 'bar',
-//         barGap: '80%',/*多个并排柱子设置柱子之间的间距*/
-//         barCategoryGap: '50%',/*多个并排柱子设置柱子之间的间距*/
-//         data: data3
-//       },
-//     ]
-//   };
-//   // 3. 把配置给实例对象
-//   myChart.setOption(option);
-//   // 4. 让图表跟随屏幕自动的去适应
-//   window.addEventListener("resize", function () {
-//     myChart.resize();
-//   });
-// }
-
 // 3D柱状图
 function workNum () {
   var city = ['呼图壁县', '玛纳斯县', '昌吉市', '阜康市', '吉木萨尔县', '奇台县', '木垒哈萨克自治州'];
@@ -124,19 +27,36 @@ function workNum () {
     },
     xAxis3D: {
       type: 'category',
+      splitLine: {
+        show: false // 控制平衡线
+      },
+      name: '',
       data: city
     },
     yAxis3D: {
       type: 'category',
+      splitLine: {
+        show: false // 控制平衡线
+      },
+      name: '',
       data: event
     },
     zAxis3D: {
-      type: 'value'
+      type: 'value',
+      name: '',
+      splitLine: {
+        show: false // 控制平衡线
+      }
     },
     grid3D: {
-      top: -30,
-      boxWidth: 200,
+      top: -5,
+      left: 0,
+      show: true,
+      width: '100%',
+      height: '100%',
+      boxWidth: 250,
       boxDepth: 80,
+      environment: 'auto',
       viewControl: {
         // projection: 'orthographic'
         //自动旋转

@@ -1003,3 +1003,15 @@ table {
   margin-left: 7.65625rem;
   width: 2.578125rem;
 }
+
+@media screen and (min-height: 864px) {
+
+  .mainbox .column {
+    min-height: 87vh;
+  }
+
+  .slideBox .tpxw_tit1 {
+    margin-top: 85%;
+  }
+  
+}

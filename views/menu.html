@@ -19,7 +19,7 @@
     <!-- 主题 -->
     <div class="page">
       <div class="top">
-        <ul class="clearfix">
+        <ul class="clearfix" style="margin-left: 0px;">
           <li><a href="javascript:;" class="act">
               <img src="../img/t2.png">
               <div class="title">农村党建</div>
@@ -172,9 +172,11 @@
                   </a>
                 </li>
                 <li>
-                  <a href="javascript:;"><img src="../img/c13.png" />
+                  <!-- 2021-3-15 -->
+                  <a href="javascript:;"><img src="../img/c13_c.png" />
                     <div class="title">村级干部队伍</div>
                   </a>
+                  <!-- 2021-3-15 -->
                 </li>
 
                 <li>
@@ -543,12 +545,13 @@
                     <div class="title">访惠聚工作队</div>
                   </a>
                 </li>
+                <!-- 2021-3-15 -->
                 <li>
                   <a href="javascript:;"><img src="../img/c13.png" />
-                    <div class="title">村级干部队伍</div>
+                    <div class="title">社区干部队伍</div>
                   </a>
                 </li>
-
+                <!-- 2021-3-15 -->
                 <li>
                   <a href="javascript:;"><img src="../img/c14.png" />
                     <div class="title">党员队伍</div>
@@ -566,6 +569,13 @@
                     <div class="title">应急志愿者队伍</div>
                   </a>
                 </li>
+                <!-- 2021-3-15 -->
+                <li>
+                  <a href="javascript:;"><img src="../img/l2-7.png" />
+                    <div class="title">社区后备力量</div>
+                  </a>
+                </li>
+                <!-- 2021-3-15 -->
               </ul>
             </div>
 
@@ -604,6 +614,7 @@
               <div class="s2">
                 <div class="l2 clearfix">
                   <ul>
+                    <!-- 2021-3-15 -->
                     <li>
                       <a href="javascript:;"><img src="../img/l2-5.png" />
                         <div class="title">村干部</div>
@@ -612,11 +623,6 @@
                     <li>
                       <a href="javascript:;"><img src="../img/l2-6.png" />
                         <div class="title">片(组)干部</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="javascript:;"><img src="../img/l2-7.png" />
-                        <div class="title">村级后备力量</div>
                       </a>
                     </li>
                     <li>
@@ -629,6 +635,7 @@
                         <div class="title">联户长</div>
                       </a>
                     </li>
+                    <!-- 2021-3-15 -->
                   </ul>
                 </div>
               </div>
@@ -1114,13 +1121,20 @@
       const index = $(this).parent().index();
       $('.active').each(function (i, v) {
         if (i === index) {
-          $(v).removeClass('hidden');
+          // 2021-3-15
+          if ($('.list1 .l1 ul li a').hasClass('dis1') && !$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          } else {
+            $(v).removeClass('hidden');
+          }
+          // 2021-3-15
         } else {
           if (!$(v).hasClass('hidden')) {
             $(v).addClass('hidden');
           }
         }
       })
+
     })
   })
 
@@ -1131,7 +1145,13 @@
       const index = $(this).parent().index();
       $('.active-2').each(function (i, v) {
         if (i === index) {
-          $(v).removeClass('hidden');
+          // 2021-3-15
+          if ($('.list1 .l1 ul li a').hasClass('dis11') && !$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          } else {
+            $(v).removeClass('hidden');
+          }
+          // 2021-3-15
         } else {
           if (!$(v).hasClass('hidden')) {
             $(v).addClass('hidden');
@@ -1177,7 +1197,13 @@
       $('.active3 .s3 .l2 ul li a').removeClass('dis6');
       $('.active3').each(function (i, v) {
         if (i === index) {
-          $(v).removeClass('hidden');
+          // 2021-3-15
+          if ($('.list3 .l1 ul li a').hasClass('dis3') && !$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          } else {
+            $(v).removeClass('hidden');
+          }
+          // 2021-3-15
         } else {
           if (!$(v).hasClass('hidden')) {
             $(v).addClass('hidden');
@@ -1206,7 +1232,13 @@
       $('.active9 .s3 .l2 ul li a').removeClass('dis6');
       $('.active9').each(function (i, v) {
         if (i === index) {
-          $(v).removeClass('hidden');
+          // 2021-3-15
+          if ($('.list9 .l1 ul li a').hasClass('dis3') && !$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          } else {
+            $(v).removeClass('hidden');
+          }
+          // 2021-3-15
         } else {
           if (!$(v).hasClass('hidden')) {
             $(v).addClass('hidden');
@@ -1298,7 +1330,13 @@
       $('.active7').each(function (i, v) {
         if (index === 0 && i === 0 || index === 1 && i === 1 || index === 4 && i === 2 || index === 6 &&
           i === 3) {
-          $(v).removeClass('hidden');
+          // 2021-3-15
+          if ($('.list6 .l1 ul li a').hasClass('dis8') && !$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          } else {
+            $(v).removeClass('hidden');
+          }
+          // 2021-3-15
         } else {
           if (!$(v).hasClass('hidden')) {
             $(v).addClass('hidden');
@@ -1332,7 +1370,13 @@
       const index = $(this).parent().index();
       $('.active8').each(function (i, v) {
         if (index === 5 && i === 0) {
-          $(v).removeClass('hidden');
+          // 2021-3-15
+          if ($('.list8 .l1 ul li a').hasClass('dis10') && !$(v).hasClass('hidden')) {
+            $(v).addClass('hidden');
+          } else {
+            $(v).removeClass('hidden');
+          }
+          // 2021-3-15
         } else {
           if (!$(v).hasClass('hidden')) {
             $(v).addClass('hidden');
@@ -1341,13 +1385,15 @@
       })
     })
   })
-
+  //2021-3-8
   $(function () {
     $('.list7 .l1 ul li a').on('click', function () {
       $('.list7 .l1 ul li a').removeClass('dis12');
       $(this).addClass('dis12');
     })
   })
+  //2021-3-8
+
 
 
 

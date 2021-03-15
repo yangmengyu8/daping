@@ -171,6 +171,23 @@ body {
 
 a {
   text-decoration: none;
-  color: #f8c454;
-  font-size: .4375rem;
+  color: #f8d554;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-height: 864px) {
+
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    margin-top: 5%;
+  }
+
+  .show {
+    margin-top: 20%;
+  }
 }
