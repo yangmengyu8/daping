@@ -616,7 +616,9 @@ table {
   width: 90%;
   height: 4rem;
   margin-left: .46875rem;
-  margin-top: .625rem;
+  /* 2021-3-16 */
+  margin-top: .546875rem;
+  /* 2021-3-16 */
 }
 
 .nav {
@@ -1013,5 +1015,7 @@ table {
   .slideBox .tpxw_tit1 {
     margin-top: 85%;
   }
-  
+  .echarts_style {
+    margin-top: .859375rem;
+  }
 }

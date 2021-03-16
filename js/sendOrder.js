@@ -117,7 +117,10 @@ function keyData2 (data) {
   // 指定图表的配置项和数据
   option = {
     tooltip: {
-
+      // trigger: 'axis',
+      // axisPointer: { // 坐标轴指示器，坐标轴触发有效
+      //   type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+      // }
     },
     legend: {
       // orient: 'vertical',
@@ -130,9 +133,9 @@ function keyData2 (data) {
       }
     },
     grid: {
-      top: "6%",
+      top: "15%",
       left: "2%",
-      right: "-5%",
+      right: "0%",
       bottom: "0%",
       // show: true, // 显示边框
       // borderColor: "#19B7F5", // 边框颜色
@@ -141,6 +144,20 @@ function keyData2 (data) {
     xAxis: {
       type: 'category',
       data: ['玛纳斯县', '呼图壁县', '昌吉市', '阜康市', '吉木萨尔县', '奇台县', '木垒县'],
+      axisPointer: {
+        type: 'shadow'
+      },
+      splitArea: {
+        show: true,
+        areaStyle: {
+          color: [
+            '#1b4765',
+            'rgba(100, 100, 100, 0)'
+            // 'rgba(123,19,19,0.3)',
+            // 'rgba(100,100,100,0.3)'
+          ]
+        }
+      },
       axisTick: {
         alignWithLabel: false,
         show: false
@@ -355,7 +372,10 @@ function keyData3 (data) {
   // 指定图表的配置项和数据
   option = {
     tooltip: {
-
+      // trigger: 'axis',
+      // axisPointer: { // 坐标轴指示器，坐标轴触发有效
+      //   type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+      // }
     },
     legend: {
       // orient: 'vertical',
@@ -368,9 +388,9 @@ function keyData3 (data) {
       }
     },
     grid: {
-      top: "5%",
+      top: "15%",
       left: "2%",
-      right: "-5%",
+      right: "0%",
       bottom: "2%",
       // show: true, // 显示边框
       // borderColor: "#19B7F5", // 边框颜色
@@ -379,6 +399,20 @@ function keyData3 (data) {
     xAxis: {
       type: 'category',
       data: ['玛纳斯县', '呼图壁县', '昌吉市', '阜康市', '吉木萨尔县', '奇台县', '木垒县'],
+      axisPointer: {
+        type: 'shadow'
+      },
+      splitArea: {
+        show: true,
+        areaStyle: {
+          color: [
+            '#1b4765',
+            'rgba(100, 100, 100, 0)'
+            // 'rgba(123,19,19,0.3)',
+            // 'rgba(100,100,100,0.3)'
+          ]
+        }
+      },
       axisTick: {
         alignWithLabel: false,
         show: false

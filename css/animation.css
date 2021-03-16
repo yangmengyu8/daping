@@ -177,7 +177,7 @@ a {
   letter-spacing: 2px;
 }
 
-@media screen and (min-height: 864px) {
+@media screen and (min-height: 13.5rem) {
 
   .p1,
   .p2,
